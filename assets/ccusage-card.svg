@@ -24,7 +24,7 @@
   <rect x="10" y="10" width="880" height="480" rx="22" fill="url(#bg)" filter="url(#shadow)"/>
   <rect x="10.5" y="10.5" width="879" height="479" rx="21.5" stroke="#CBD5E1"/>
   <text x="36" y="58" class="title">ccusage Burn Rate</text>
-  <text x="36" y="82" class="subtitle">No exported usage data yet / updated 2026-04-26 21:15 UTC</text>
+  <text x="36" y="82" class="subtitle">No exported usage data yet / updated 2026-04-26 21:18 UTC</text>
 
   <text x="36" y="126" class="label">Total cost</text>
   <text x="36" y="162" class="total">$0.00</text>
