@@ -504,14 +504,38 @@ function aggregate(inputs, warnings) {
     toolTotal.dates += datesForTool.size;
   }
 
+  let runningCost = 0;
+  let runningTokens = 0;
+  let runningCredits = 0;
+  const toolRunningTokens = new Map();
+
   const daily = [...byDate.values()]
     .sort((a, b) => a.date.localeCompare(b.date))
-    .map((day) => ({
-      ...day,
-      costUSD: round(day.costUSD),
-      credits: round(day.credits),
-      tokens: Math.round(day.tokens),
-    }));
+    .map((day) => {
+      runningCost += day.costUSD;
+      runningTokens += day.tokens;
+      runningCredits += day.credits;
+
+      const cumulativeTools = {};
+      for (const tool of TOOL_DEFS) {
+        const dayTokens = day.tools[tool.id]?.tokens || 0;
+        const prev = toolRunningTokens.get(tool.id) || 0;
+        const total = prev + dayTokens;
+        toolRunningTokens.set(tool.id, total);
+        cumulativeTools[tool.id] = Math.round(total);
+      }
+
+      return {
+        ...day,
+        costUSD: round(day.costUSD),
+        credits: round(day.credits),
+        tokens: Math.round(day.tokens),
+        cumulativeCostUSD: round(runningCost),
+        cumulativeTokens: Math.round(runningTokens),
+        cumulativeCredits: Math.round(runningCredits),
+        cumulativeTools,
+      };
+    });
 
   const toolSummaries = [...tools.values()].map((tool) => {
     // Collect models across all days for this tool
@@ -607,22 +631,23 @@ function xml(value) {
 
 function renderCard(summary, title) {
   const width = 1000;
-  const height = 700;
+  const height = 760;
   const margin = 40;
-  const shareBasis = summary.totals.costUSD > 0 ? 'costUSD' : 'tokens';
-  const shareTotal = summary.totals[shareBasis] || 0;
+  // Pivot to tokens as primary basis
+  const shareBasis = 'tokens';
   const tools = [...summary.tools].sort((a, b) => (b[shareBasis] || 0) - (a[shareBasis] || 0));
   const nonZeroTools = tools.filter((tool) => (tool.costUSD || tool.tokens || tool.credits) > 0);
   
-  const rangeText = summary.dateRange
-    ? `${summary.dateRange.start} to ${summary.dateRange.end}`
-    : 'No exported usage data yet';
   const updated = new Date(summary.generatedAt).toISOString().replace('T', ' ').slice(0, 16);
-  const subtitle = `${rangeText} / updated ${updated} UTC`;
+  const subtitle = `AI Engineering & Intelligence Volume Statistics / Updated ${updated} UTC`;
+
+  // Highlights
+  const totalDays = summary.daily.length;
+  const topModel = tools[0]?.models[0]?.name || 'N/A';
 
   // Chart data
-  const chartHeight = 200;
-  const chartY = 460;
+  const chartHeight = 220;
+  const chartY = 500;
   const sparkline = renderLineChart(summary.daily, {
     x: margin,
     y: chartY,
@@ -634,20 +659,18 @@ function renderCard(summary, title) {
 
   const toolStats = nonZeroTools.slice(0, 4).map((tool, index) => {
     const x = margin + (index % 2) * 460;
-    const y = 240 + Math.floor(index / 2) * 100;
-    const modelList = tool.models.slice(0, 3).map(m => `<text class="model-item">${xml(m.name)}: ${xml(formatUsd(m.costUSD))}</text>`).join('');
-    
+    const y = 280 + Math.floor(index / 2) * 100;
     return `
       <g transform="translate(${x}, ${y})">
-        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+        <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="${tool.color}"/>
         <text x="44" y="29" class="tool-name">${xml(tool.name)}</text>
-        <text x="24" y="58" class="tool-metric">${xml(formatUsd(tool.costUSD))}</text>
-        <text x="140" y="57" class="tool-muted">${xml(formatCompact(tool.tokens))} tokens</text>
+        <text x="24" y="62" class="tool-metric">${xml(formatCompact(tool.tokens))} tokens</text>
+        <text x="225" y="61" class="tool-muted" text-anchor="end">spent ${xml(formatUsd(tool.costUSD))}</text>
         <g transform="translate(240, 20)">
           ${tool.models.slice(0, 3).map((m, i) => `
             <text x="0" y="${i * 20}" class="model-item">${xml(m.name.length > 20 ? m.name.slice(0, 17) + '...' : m.name)}</text>
-            <text x="160" y="${i * 20}" class="model-item" text-anchor="end">${xml(formatUsd(m.costUSD))}</text>
+            <text x="160" y="${i * 20}" class="model-item" text-anchor="end">${xml(formatCompact(m.tokens))}</text>
           `).join('')}
         </g>
       </g>
@@ -663,99 +686,135 @@ function renderCard(summary, title) {
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.05"/>
     </filter>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#10B981" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <style>
-    .title { font: 800 32px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
-    .subtitle { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
-    .label { font: 700 12px -apple-system, sans-serif; letter-spacing: 0.05em; text-transform: uppercase; fill: #94A3B8; }
-    .total-val { font: 800 48px -apple-system, sans-serif; fill: #0F172A; }
+    .title { font: 800 36px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
+    .subtitle { font: 600 14px -apple-system, sans-serif; fill: #64748B; letter-spacing: 0.02em; }
+    .label { font: 700 11px -apple-system, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #94A3B8; }
+    .total-val { font: 800 52px -apple-system, sans-serif; fill: #0F172A; }
     .stat-val { font: 700 24px -apple-system, sans-serif; fill: #1E293B; }
     .tool-name { font: 700 18px -apple-system, sans-serif; fill: #0F172A; }
-    .tool-metric { font: 700 22px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-metric { font: 800 22px -apple-system, sans-serif; fill: #0F172A; }
     .tool-muted { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
-    .model-item { font: 500 12px -apple-system, sans-serif; fill: #475569; }
-    .chart-label { font: 500 11px -apple-system, sans-serif; fill: #94A3B8; }
+    .model-item { font: 600 12px -apple-system, sans-serif; fill: #475569; }
+    .chart-label { font: 600 11px -apple-system, sans-serif; fill: #94A3B8; }
+    .badge { font: 700 10px -apple-system, sans-serif; fill: #10B981; }
   </style>
 
-  <rect width="${width}" height="${height}" rx="24" fill="url(#bg)"/>
+  <rect width="${width}" height="${height}" rx="32" fill="url(#bg)"/>
   
-  <text x="${margin}" y="70" class="title">${xml(title)}</text>
-  <text x="${margin}" y="95" class="subtitle">${xml(subtitle)}</text>
+  <text x="${margin}" y="75" class="title">${xml(title.replace('ccusage ', ''))}</text>
+  <text x="${margin}" y="105" class="subtitle">${xml(subtitle)}</text>
 
-  <g transform="translate(${margin}, 140)">
-    <text y="0" class="label">Total Burn Rate</text>
-    <text y="45" class="total-val">${xml(formatUsd(summary.totals.costUSD))}</text>
+  <!-- Key Metrics Row -->
+  <g transform="translate(${margin}, 150)">
+    <g>
+      <text y="0" class="label">Total Intelligence Volume</text>
+      <text y="50" class="total-val">${xml(formatCompact(summary.totals.tokens))} Tokens</text>
+    </g>
+    <g transform="translate(420, 0)">
+      <text y="0" class="label">Historical Cost</text>
+      <text y="42" class="stat-val">${xml(formatUsd(summary.totals.costUSD))}</text>
+      <text y="62" class="tool-muted">Across ${totalDays} active production days</text>
+    </g>
+    <g transform="translate(700, 0)">
+      <text y="0" class="label">Main Architecture</text>
+      <text y="42" class="stat-val" fill="#10B981">${xml(topModel)}</text>
+      <text y="62" class="tool-muted">Dominant LLM backend</text>
+    </g>
   </g>
 
-  <g transform="translate(400, 140)">
-    <text y="0" class="label">Total Tokens</text>
-    <text y="35" class="stat-val">${xml(formatNumber(summary.totals.tokens))}</text>
+  <g transform="translate(${margin}, 260)">
+    <text y="0" class="label">Tooling &amp; Model Efficiency Breakdown</text>
   </g>
-
-  <g transform="translate(700, 140)">
-    <text y="0" class="label">Credits Used</text>
-    <text y="35" class="stat-val">${xml(formatNumber(summary.totals.credits))}</text>
-  </g>
-
   ${toolStats}
 
   <g transform="translate(${margin}, ${chartY - 30})">
-    <text y="0" class="label">Daily Spend Trend (USD)</text>
+    <text y="0" class="label">Intelligence Throughput &amp; Growth Curve (Tokens)</text>
+    <text x="${width - margin * 2}" y="0" text-anchor="end" class="badge">● CUMULATIVE VOLUME</text>
   </g>
   ${sparkline}
 </svg>`;
 }
 
 function renderLineChart(daily, options) {
-  const { x, y, width, height, tools } = options;
+  const { x, y, width, height, basis, tools } = options;
   if (daily.length < 2) return '';
 
-  const maxCost = Math.max(...daily.map(d => d.costUSD), 0.01) * 1.2;
+  const maxDaily = Math.max(...daily.map(d => d[basis]), 1);
+  const maxCumul = Math.max(...daily.map(d => d.cumulativeTokens), 1);
   const stepX = width / (daily.length - 1);
 
-  // Y-axis grid
+  // Y-axis grid for Cumulative
   const grid = [0, 0.25, 0.5, 0.75, 1].map(p => {
     const gy = y + height - p * height;
-    const val = (p * maxCost).toFixed(0);
-    return `<line x1="${x}" y1="${gy}" x2="${x + width}" y2="${gy}" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="${x - 5}" y="${gy + 4}" text-anchor="end" class="chart-label">$${val}</text>`;
+    const val = formatCompact(p * maxCumul);
+    return `<line x1="${x}" y1="${gy}" x2="${x + width}" y2="${gy}" stroke="#E2E8F0" stroke-width="1"/><text x="${x + width + 5}" y="${gy + 4}" class="chart-label">${val}</text>`;
   }).join('');
 
-  // Date labels (every 5 days or first/last)
+  // Date labels
   const labels = daily.map((d, i) => {
-    if (i === 0 || i === daily.length - 1 || i % Math.max(1, Math.floor(daily.length / 6)) === 0) {
-      return `<text x="${x + i * stepX}" y="${y + height + 20}" text-anchor="middle" class="chart-label">${d.date.slice(5)}</text>`;
+    if (i === 0 || i === daily.length - 1 || i % Math.max(1, Math.floor(daily.length / 8)) === 0) {
+      return `<text x="${x + i * stepX}" y="${y + height + 24}" text-anchor="middle" class="chart-label">${d.date.slice(5)}</text>`;
     }
     return '';
   }).join('');
 
-  // Paths for each tool
-  const paths = tools.filter(t => t.costUSD > 0).map(tool => {
-    const points = daily.map((d, i) => {
-      const val = d.tools[tool.id]?.costUSD || 0;
-      return { x: x + i * stepX, y: y + height - (val / maxCost) * height };
-    });
+  // Daily total usage (bars)
+  const bars = daily.map((d, i) => {
+    const barH = (d[basis] / maxDaily) * (height * 0.4); 
+    return `<rect x="${x + i * stepX - 2}" y="${y + height - barH}" width="4" height="${barH}" fill="#CBD5E1" rx="2"/>`;
+  }).join('');
 
-    if (points.length < 2) return '';
+  // Per-tool cumulative lines
+  const toolPaths = tools.filter(t => t.tokens > 0).map(tool => {
+    const points = daily.map((d, i) => ({
+      x: x + i * stepX,
+      y: y + height - (d.cumulativeTools[tool.id] / maxCumul) * height
+    }));
 
-    // Create smooth path using cubic bezier
-    let d = `M ${points[0].x},${points[0].y}`;
+    let pathD = `M ${points[0].x},${points[0].y}`;
     for (let i = 0; i < points.length - 1; i++) {
       const p0 = points[i];
       const p1 = points[i + 1];
-      const cp1x = p0.x + (p1.x - p0.x) / 3;
-      const cp2x = p1.x - (p1.x - p0.x) / 3;
-      d += ` C ${cp1x},${p0.y} ${cp2x},${p1.y} ${p1.x},${p1.y}`;
+      const cp1x = p0.x + (p1.x - p0.x) / 2;
+      pathD += ` C ${cp1x},${p0.y} ${cp1x},${p1.y} ${p1.x},${p1.y}`;
     }
 
-    const areaD = `${d} L ${points[points.length - 1].x},${y + height} L ${points[0].x},${y + height} Z`;
-
-    return `
-      <path d="${areaD}" fill="${tool.color}" fill-opacity="0.05"/>
-      <path d="${d}" stroke="${tool.color}" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    `;
+    return `<path d="${pathD}" stroke="${tool.color}" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 2"/>`;
   }).join('');
 
-  return `<g>${grid}${labels}${paths}</g>`;
+  // Grand total cumulative Line
+  const totalPoints = daily.map((d, i) => ({
+    x: x + i * stepX,
+    y: y + height - (d.cumulativeTokens / maxCumul) * height
+  }));
+
+  let totalPathD = `M ${totalPoints[0].x},${totalPoints[0].y}`;
+  for (let i = 0; i < totalPoints.length - 1; i++) {
+    const p0 = totalPoints[i];
+    const p1 = totalPoints[i + 1];
+    const cp1x = p0.x + (p1.x - p0.x) / 2;
+    totalPathD += ` C ${cp1x},${p0.y} ${cp1x},${p1.y} ${p1.x},${p1.y}`;
+  }
+
+  const areaD = `${totalPathD} L ${totalPoints[totalPoints.length - 1].x},${y + height} L ${totalPoints[0].x},${y + height} Z`;
+
+  return `
+    <g>
+      ${grid}
+      ${labels}
+      <g opacity="0.6">${bars}</g>
+      <path d="${areaD}" fill="url(#lineGrad)"/>
+      ${toolPaths}
+      <path d="${totalPathD}" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      ${totalPoints.map((p, i) => i === totalPoints.length - 1 ? `<circle cx="${p.x}" cy="${p.y}" r="6" fill="#10B981" stroke="white" stroke-width="3"/>` : '').join('')}
+    </g>
+  `;
 }
 
 async function main() {

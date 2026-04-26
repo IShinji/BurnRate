@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2026-04-26T21:25:55.298Z",
+=======
+  "generatedAt": "2026-04-26T21:35:42.158Z",
+>>>>>>> a60bd20 (style: remove ccusage from title and fix text overlap in tool cards)
   "dateRange": {
     "start": "2026-04-11",
     "end": "2026-04-26"
@@ -112,6 +116,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 19.15,
+      "cumulativeTokens": 39315128,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 0,
+        "codex": 39315128,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -132,6 +146,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 25.26,
+      "cumulativeTokens": 51845578,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 0,
+        "codex": 51845578,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -152,6 +176,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 27.74,
+      "cumulativeTokens": 56086428,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 0,
+        "codex": 56086428,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -172,6 +206,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 37.31,
+      "cumulativeTokens": 79673675,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 0,
+        "codex": 79673675,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -204,6 +248,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 215.73,
+      "cumulativeTokens": 260435509,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 164172282,
+        "codex": 96263227,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -224,6 +278,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 292.8,
+      "cumulativeTokens": 363859658,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 267596431,
+        "codex": 96263227,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -244,6 +308,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 356.42,
+      "cumulativeTokens": 452621407,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 267596431,
+        "codex": 185024976,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -264,6 +338,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 487.08,
+      "cumulativeTokens": 623452867,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 267596431,
+        "codex": 355856436,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     },
     {
@@ -284,6 +368,16 @@
             }
           }
         }
+      },
+      "cumulativeCostUSD": 551.37,
+      "cumulativeTokens": 710096831,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 267596431,
+        "codex": 442500400,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
       }
     }
   ],

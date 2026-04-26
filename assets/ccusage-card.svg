@@ -1,4 +1,4 @@
-<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="760" viewBox="0 0 1000 760" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#F8FAFC"/>
@@ -7,81 +7,97 @@
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.05"/>
     </filter>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#10B981" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <style>
-    .title { font: 800 32px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
-    .subtitle { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
-    .label { font: 700 12px -apple-system, sans-serif; letter-spacing: 0.05em; text-transform: uppercase; fill: #94A3B8; }
-    .total-val { font: 800 48px -apple-system, sans-serif; fill: #0F172A; }
+    .title { font: 800 36px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
+    .subtitle { font: 600 14px -apple-system, sans-serif; fill: #64748B; letter-spacing: 0.02em; }
+    .label { font: 700 11px -apple-system, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #94A3B8; }
+    .total-val { font: 800 52px -apple-system, sans-serif; fill: #0F172A; }
     .stat-val { font: 700 24px -apple-system, sans-serif; fill: #1E293B; }
     .tool-name { font: 700 18px -apple-system, sans-serif; fill: #0F172A; }
-    .tool-metric { font: 700 22px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-metric { font: 800 22px -apple-system, sans-serif; fill: #0F172A; }
     .tool-muted { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
-    .model-item { font: 500 12px -apple-system, sans-serif; fill: #475569; }
-    .chart-label { font: 500 11px -apple-system, sans-serif; fill: #94A3B8; }
+    .model-item { font: 600 12px -apple-system, sans-serif; fill: #475569; }
+    .chart-label { font: 600 11px -apple-system, sans-serif; fill: #94A3B8; }
+    .badge { font: 700 10px -apple-system, sans-serif; fill: #10B981; }
   </style>
 
-  <rect width="1000" height="700" rx="24" fill="url(#bg)"/>
+  <rect width="1000" height="760" rx="32" fill="url(#bg)"/>
   
-  <text x="40" y="70" class="title">ccusage Burn Rate</text>
-  <text x="40" y="95" class="subtitle">2026-04-11 to 2026-04-26 / updated 2026-04-26 21:25 UTC</text>
+  <text x="40" y="75" class="title">Burn Rate</text>
+  <text x="40" y="105" class="subtitle">AI Engineering &amp; Intelligence Volume Statistics / Updated 2026-04-26 21:35 UTC</text>
 
-  <g transform="translate(40, 140)">
-    <text y="0" class="label">Total Burn Rate</text>
-    <text y="45" class="total-val">$551.38</text>
+  <!-- Key Metrics Row -->
+  <g transform="translate(40, 150)">
+    <g>
+      <text y="0" class="label">Total Intelligence Volume</text>
+      <text y="50" class="total-val">710.1M Tokens</text>
+    </g>
+    <g transform="translate(420, 0)">
+      <text y="0" class="label">Historical Cost</text>
+      <text y="42" class="stat-val">$551.38</text>
+      <text y="62" class="tool-muted">Across 9 active production days</text>
+    </g>
+    <g transform="translate(700, 0)">
+      <text y="0" class="label">Main Architecture</text>
+      <text y="42" class="stat-val" fill="#10B981">gpt-5.5</text>
+      <text y="62" class="tool-muted">Dominant LLM backend</text>
+    </g>
   </g>
 
-  <g transform="translate(400, 140)">
-    <text y="0" class="label">Total Tokens</text>
-    <text y="35" class="stat-val">710,096,831</text>
+  <g transform="translate(40, 260)">
+    <text y="0" class="label">Tooling &amp; Model Efficiency Breakdown</text>
   </g>
-
-  <g transform="translate(700, 140)">
-    <text y="0" class="label">Credits Used</text>
-    <text y="35" class="stat-val">0</text>
-  </g>
-
   
-      <g transform="translate(40, 240)">
-        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+      <g transform="translate(40, 280)">
+        <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="#10A37F"/>
         <text x="44" y="29" class="tool-name">Codex</text>
-        <text x="24" y="58" class="tool-metric">$303.36</text>
-        <text x="140" y="57" class="tool-muted">442.5M tokens</text>
+        <text x="24" y="62" class="tool-metric">442.5M tokens</text>
+        <text x="225" y="61" class="tool-muted" text-anchor="end">spent $303.36</text>
         <g transform="translate(240, 20)">
           
             <text x="0" y="0" class="model-item">gpt-5.5</text>
-            <text x="160" y="0" class="model-item" text-anchor="end">$258.57</text>
+            <text x="160" y="0" class="model-item" text-anchor="end">346.2M</text>
           
             <text x="0" y="20" class="model-item">gpt-5.4</text>
-            <text x="160" y="20" class="model-item" text-anchor="end">$44.79</text>
+            <text x="160" y="20" class="model-item" text-anchor="end">96.3M</text>
           
         </g>
       </g>
     
-      <g transform="translate(500, 240)">
-        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+      <g transform="translate(500, 280)">
+        <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="#6E56CF"/>
         <text x="44" y="29" class="tool-name">Claude Code</text>
-        <text x="24" y="58" class="tool-metric">$248.02</text>
-        <text x="140" y="57" class="tool-muted">267.6M tokens</text>
+        <text x="24" y="62" class="tool-metric">267.6M tokens</text>
+        <text x="225" y="61" class="tool-muted" text-anchor="end">spent $248.02</text>
         <g transform="translate(240, 20)">
           
             <text x="0" y="0" class="model-item">claude-opus-4-7</text>
-            <text x="160" y="0" class="model-item" text-anchor="end">$248.02</text>
+            <text x="160" y="0" class="model-item" text-anchor="end">267.6M</text>
           
         </g>
       </g>
     
 
-  <g transform="translate(40, 430)">
-    <text y="0" class="label">Daily Spend Trend (USD)</text>
+  <g transform="translate(40, 470)">
+    <text y="0" class="label">Intelligence Throughput &amp; Growth Curve (Tokens)</text>
+    <text x="920" y="0" text-anchor="end" class="badge">● CUMULATIVE VOLUME</text>
   </g>
-  <g><line x1="40" y1="660" x2="960" y2="660" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="664" text-anchor="end" class="chart-label">$0</text><line x1="40" y1="610" x2="960" y2="610" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="614" text-anchor="end" class="chart-label">$54</text><line x1="40" y1="560" x2="960" y2="560" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="564" text-anchor="end" class="chart-label">$107</text><line x1="40" y1="510" x2="960" y2="510" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="514" text-anchor="end" class="chart-label">$161</text><line x1="40" y1="460" x2="960" y2="460" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="464" text-anchor="end" class="chart-label">$214</text><text x="40" y="680" text-anchor="middle" class="chart-label">04-11</text><text x="155" y="680" text-anchor="middle" class="chart-label">04-12</text><text x="270" y="680" text-anchor="middle" class="chart-label">04-16</text><text x="385" y="680" text-anchor="middle" class="chart-label">04-20</text><text x="500" y="680" text-anchor="middle" class="chart-label">04-21</text><text x="615" y="680" text-anchor="middle" class="chart-label">04-22</text><text x="730" y="680" text-anchor="middle" class="chart-label">04-24</text><text x="845" y="680" text-anchor="middle" class="chart-label">04-25</text><text x="960" y="680" text-anchor="middle" class="chart-label">04-26</text>
-      <path d="M 40,660 C 78.33333333333334,660 116.66666666666666,660 155,660 C 193.33333333333334,660 231.66666666666666,660 270,660 C 308.3333333333333,660 346.6666666666667,660 385,660 C 423.3333333333333,660 461.6666666666667,500.3173875779995 500,500.3173875779995 C 538.3333333333334,500.3173875779995 576.6666666666666,588.0044114075403 615,588.0044114075403 C 653.3333333333334,588.0044114075403 691.6666666666666,660 730,660 C 768.3333333333334,660 806.6666666666666,660 845,660 C 883.3333333333334,660 921.6666666666666,660 960,660 L 960,660 L 40,660 Z" fill="#6E56CF" fill-opacity="0.05"/>
-      <path d="M 40,660 C 78.33333333333334,660 116.66666666666666,660 155,660 C 193.33333333333334,660 231.66666666666666,660 270,660 C 308.3333333333333,660 346.6666666666667,660 385,660 C 423.3333333333333,660 461.6666666666667,500.3173875779995 500,500.3173875779995 C 538.3333333333334,500.3173875779995 576.6666666666666,588.0044114075403 615,588.0044114075403 C 653.3333333333334,588.0044114075403 691.6666666666666,660 730,660 C 768.3333333333334,660 806.6666666666666,660 845,660 C 883.3333333333334,660 921.6666666666666,660 960,660" stroke="#6E56CF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    
-      <path d="M 40,642.1105406718231 C 78.33333333333334,642.1105406718231 116.66666666666666,654.2915045958973 155,654.2915045958973 C 193.33333333333334,654.2915045958973 231.66666666666666,657.6865280424466 270,657.6865280424466 C 308.3333333333333,657.6865280424466 346.6666666666667,651.0566374285394 385,651.0566374285394 C 423.3333333333333,651.0566374285394 461.6666666666667,653.0179141912341 500,653.0179141912341 C 538.3333333333334,653.0179141912341 576.6666666666666,660 615,660 C 653.3333333333334,660 691.6666666666666,600.5749243358368 730,600.5749243358368 C 768.3333333333334,600.5749243358368 806.6666666666666,537.9439926390912 845,537.9439926390912 C 883.3333333333334,537.9439926390912 921.6666666666666,599.944794118746 960,599.944794118746 L 960,660 L 40,660 Z" fill="#10A37F" fill-opacity="0.05"/>
-      <path d="M 40,642.1105406718231 C 78.33333333333334,642.1105406718231 116.66666666666666,654.2915045958973 155,654.2915045958973 C 193.33333333333334,654.2915045958973 231.66666666666666,657.6865280424466 270,657.6865280424466 C 308.3333333333333,657.6865280424466 346.6666666666667,651.0566374285394 385,651.0566374285394 C 423.3333333333333,651.0566374285394 461.6666666666667,653.0179141912341 500,653.0179141912341 C 538.3333333333334,653.0179141912341 576.6666666666666,660 615,660 C 653.3333333333334,660 691.6666666666666,600.5749243358368 730,600.5749243358368 C 768.3333333333334,600.5749243358368 806.6666666666666,537.9439926390912 845,537.9439926390912 C 883.3333333333334,537.9439926390912 921.6666666666666,599.944794118746 960,599.944794118746" stroke="#10A37F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+    <g>
+      <line x1="40" y1="720" x2="960" y2="720" stroke="#E2E8F0" stroke-width="1"/><text x="965" y="724" class="chart-label">0</text><line x1="40" y1="665" x2="960" y2="665" stroke="#E2E8F0" stroke-width="1"/><text x="965" y="669" class="chart-label">177.5M</text><line x1="40" y1="610" x2="960" y2="610" stroke="#E2E8F0" stroke-width="1"/><text x="965" y="614" class="chart-label">355M</text><line x1="40" y1="555" x2="960" y2="555" stroke="#E2E8F0" stroke-width="1"/><text x="965" y="559" class="chart-label">532.6M</text><line x1="40" y1="500" x2="960" y2="500" stroke="#E2E8F0" stroke-width="1"/><text x="965" y="504" class="chart-label">710.1M</text>
+      <text x="40" y="744" text-anchor="middle" class="chart-label">04-11</text><text x="155" y="744" text-anchor="middle" class="chart-label">04-12</text><text x="270" y="744" text-anchor="middle" class="chart-label">04-16</text><text x="385" y="744" text-anchor="middle" class="chart-label">04-20</text><text x="500" y="744" text-anchor="middle" class="chart-label">04-21</text><text x="615" y="744" text-anchor="middle" class="chart-label">04-22</text><text x="730" y="744" text-anchor="middle" class="chart-label">04-24</text><text x="845" y="744" text-anchor="middle" class="chart-label">04-25</text><text x="960" y="744" text-anchor="middle" class="chart-label">04-26</text>
+      <g opacity="0.6"><rect x="38" y="700.860277927917" width="4" height="19.139722072082982" fill="#CBD5E1" rx="2"/><rect x="153" y="713.8998206889182" width="4" height="6.100179311081785" fill="#CBD5E1" rx="2"/><rect x="268" y="717.9354336491186" width="4" height="2.064566350881348" fill="#CBD5E1" rx="2"/><rect x="383" y="708.517057555413" width="4" height="11.482942444587056" fill="#CBD5E1" rx="2"/><rect x="498" y="632" width="4" height="88" fill="#CBD5E1" rx="2"/><rect x="613" y="669.6501838325008" width="4" height="50.349816167499164" fill="#CBD5E1" rx="2"/><rect x="728" y="676.7882570166886" width="4" height="43.211742983311396" fill="#CBD5E1" rx="2"/><rect x="843" y="636.8343883919655" width="4" height="83.16561160803447" fill="#CBD5E1" rx="2"/><rect x="958" y="677.8192549650719" width="4" height="42.180745034928115" fill="#CBD5E1" rx="2"/></g>
+      <path d="M 40,707.8195088579405 C 97.5,707.8195088579405 97.5,703.9373636635762 155,703.9373636635762 C 212.5,703.9373636635762 212.5,702.6234766565237 270,702.6234766565237 C 327.5,702.6234766565237 327.5,695.3157488742546 385,695.3157488742546 C 442.5,695.3157488742546 442.5,639.3126775410155 500,639.3126775410155 C 557.5,639.3126775410155 557.5,607.2701281496072 615,607.2701281496072 C 672.5,607.2701281496072 672.5,579.7702380958801 730,579.7702380958801 C 787.5,579.7702380958801 787.5,526.843764466821 845,526.843764466821 C 902.5,526.843764466821 902.5,500 960,500 L 960,720 L 40,720 Z" fill="url(#lineGrad)"/>
+      <path d="M 40,720 C 97.5,720 97.5,720 155,720 C 212.5,720 212.5,720 270,720 C 327.5,720 327.5,720 385,720 C 442.5,720 442.5,669.1366522659499 500,669.1366522659499 C 557.5,669.1366522659499 557.5,637.0941028745416 615,637.0941028745416 C 672.5,637.0941028745416 672.5,637.0941028745416 730,637.0941028745416 C 787.5,637.0941028745416 787.5,637.0941028745416 845,637.0941028745416 C 902.5,637.0941028745416 902.5,637.0941028745416 960,637.0941028745416" stroke="#6E56CF" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 2"/><path d="M 40,707.8195088579405 C 97.5,707.8195088579405 97.5,703.9373636635762 155,703.9373636635762 C 212.5,703.9373636635762 212.5,702.6234766565237 270,702.6234766565237 C 327.5,702.6234766565237 327.5,695.3157488742546 385,695.3157488742546 C 442.5,695.3157488742546 442.5,690.1760252750656 500,690.1760252750656 C 557.5,690.1760252750656 557.5,690.1760252750656 615,690.1760252750656 C 672.5,690.1760252750656 672.5,662.6761352213385 730,662.6761352213385 C 787.5,662.6761352213385 787.5,609.7496615922794 845,609.7496615922794 C 902.5,609.7496615922794 902.5,582.9058971254584 960,582.9058971254584" stroke="#10A37F" stroke-width="1.5" stroke-opacity="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 2"/>
+      <path d="M 40,707.8195088579405 C 97.5,707.8195088579405 97.5,703.9373636635762 155,703.9373636635762 C 212.5,703.9373636635762 212.5,702.6234766565237 270,702.6234766565237 C 327.5,702.6234766565237 327.5,695.3157488742546 385,695.3157488742546 C 442.5,695.3157488742546 442.5,639.3126775410155 500,639.3126775410155 C 557.5,639.3126775410155 557.5,607.2701281496072 615,607.2701281496072 C 672.5,607.2701281496072 672.5,579.7702380958801 730,579.7702380958801 C 787.5,579.7702380958801 787.5,526.843764466821 845,526.843764466821 C 902.5,526.843764466821 902.5,500 960,500" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="960" cy="500" r="6" fill="#10B981" stroke="white" stroke-width="3"/>
     </g>
+  
 </svg>
