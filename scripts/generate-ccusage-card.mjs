@@ -741,7 +741,10 @@ function renderCard(summary, title) {
 
   <g transform="translate(${margin}, ${chartY - 30})">
     <text y="0" class="label">Intelligence Throughput &amp; Growth Curve (Tokens)</text>
-    <text x="${width - margin * 2}" y="0" text-anchor="end" class="badge">● CUMULATIVE VOLUME</text>
+    <g transform="translate(${width - margin * 2}, 0)" text-anchor="end">
+      <text x="0" y="0" class="badge">● CUMULATIVE VOLUME</text>
+      <text x="-150" y="0" class="badge" fill="#94A3B8">■ DAILY THROUGHPUT</text>
+    </g>
   </g>
   ${sparkline}
 </svg>`;
@@ -773,7 +776,7 @@ function renderLineChart(daily, options) {
   // Daily total usage (bars)
   const bars = daily.map((d, i) => {
     const barH = (d[basis] / maxDaily) * (height * 0.4); 
-    return `<rect x="${x + i * stepX - 2}" y="${y + height - barH}" width="4" height="${barH}" fill="#CBD5E1" rx="2"/>`;
+    return `<rect x="${x + i * stepX - 2}" y="${y + height - barH}" width="4" height="${barH}" fill="#94A3B8" rx="2"/>`;
   }).join('');
 
   // Per-tool cumulative lines
