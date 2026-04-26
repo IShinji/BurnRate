@@ -72,6 +72,9 @@ fs.writeFileSync(outfile, `${JSON.stringify(payload, null, 2)}\n`);
 NODE
 }
 
+COMMON_ARGS=()
+EXTRA_ARGS=()
+
 build_common_args() {
   COMMON_ARGS=("$REPORT" "--json")
 
@@ -108,10 +111,10 @@ export_tool() {
 
   local outfile="$DATA_DIR/$id.json"
   local tmpfile errfile exit_code
-  tmpfile="$(mktemp "$DATA_DIR/.$id.XXXXXX.json")"
-  errfile="$(mktemp "$DATA_DIR/.$id.XXXXXX.err")"
+  tmpfile="$(mktemp "${DATA_DIR}/.tmp.${id}.XXXXXX")"
+  errfile="$(mktemp "${DATA_DIR}/.err.${id}.XXXXXX")"
 
-  local cmd=(bunx "$package" "${COMMON_ARGS[@]}" "${EXTRA_ARGS[@]}")
+  local cmd=(bunx "$package" ${COMMON_ARGS[@]+"${COMMON_ARGS[@]}"} ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"})
   log "Exporting $label with: ${cmd[*]}"
 
   if "${cmd[@]}" >"$tmpfile" 2>"$errfile"; then
