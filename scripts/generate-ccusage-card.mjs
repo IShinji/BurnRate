@@ -657,7 +657,7 @@ function renderCard(summary, title) {
   const sparkline = renderLineChart(summary.daily, {
     x: margin,
     y: chartY,
-    width: width - margin * 2 - 80, // Reserve space for right-side labels
+    width: width - margin * 2 - 50, // Reduced space to align better with right margin
     height: chartHeight,
     basis: shareBasis,
     tools: summary.tools
