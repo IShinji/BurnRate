@@ -24,22 +24,33 @@
   <rect x="10" y="10" width="880" height="480" rx="22" fill="url(#bg)" filter="url(#shadow)"/>
   <rect x="10.5" y="10.5" width="879" height="479" rx="21.5" stroke="#CBD5E1"/>
   <text x="36" y="58" class="title">ccusage Burn Rate</text>
-  <text x="36" y="82" class="subtitle">No exported usage data yet / updated 2026-04-26 21:18 UTC</text>
+  <text x="36" y="82" class="subtitle">2026-04-21 to 2026-04-22 / updated 2026-04-26 21:22 UTC</text>
 
   <text x="36" y="126" class="label">Total cost</text>
-  <text x="36" y="162" class="total">$0.00</text>
+  <text x="36" y="162" class="total">$248.02</text>
   <text x="380" y="126" class="label">Total tokens</text>
-  <text x="380" y="158" class="stat">0</text>
+  <text x="380" y="158" class="stat">267,596,431</text>
   <text x="620" y="126" class="label">Credits</text>
   <text x="620" y="158" class="stat">0</text>
 
   <rect x="36" y="176" width="828" height="18" rx="9" fill="#E2E8F0"/>
-  
-  <text x="36" y="218" class="label">Token share</text>
+  <rect x="36.00" y="176" width="828.00" height="18" rx="9" fill="#6E56CF"/>
+  <text x="36" y="218" class="label">Cost share</text>
   <text x="426" y="218" class="label">Cost</text>
   <text x="571" y="218" class="label">Tokens</text>
   <text x="746" y="218" class="label">Credits</text>
-  <text x="36" y="252" class="empty">Run scripts/export-ccusage-data.sh to export local usage JSON into data/.</text>
   
-  <line x1="36" y1="468" x2="864" y2="468" stroke="#CBD5E1" stroke-width="2"/><text x="36" y="432" class="label">Recent trend</text>
+  
+        <g transform="translate(36, 236)">
+          <circle cx="8" cy="8" r="6" fill="#6E56CF"/>
+          <text x="24" y="13" class="tool">Claude Code</text>
+          <text x="250" y="13" class="metric">100.0%</text>
+          <text x="390" y="13" class="metric">$248.02</text>
+          <text x="535" y="13" class="muted">267.6M tokens</text>
+          <text x="710" y="13" class="muted">0 credits</text>
+        </g>
+  
+    <text x="36" y="432" class="label">Recent trend</text>
+    <polyline points="36.00,440.00 864.00,455.38" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="36" y1="468" x2="864" y2="468" stroke="#CBD5E1" stroke-width="2"/>
 </svg>

@@ -1,21 +1,26 @@
 {
-  "generatedAt": "2026-04-26T21:18:25.115Z",
-  "dateRange": null,
+  "generatedAt": "2026-04-26T21:22:36.154Z",
+  "dateRange": {
+    "start": "2026-04-21",
+    "end": "2026-04-22"
+  },
   "totals": {
-    "costUSD": 0,
+    "costUSD": 248.02,
     "credits": 0,
-    "tokens": 0
+    "tokens": 267596431
   },
   "tools": [
     {
       "id": "claude-code",
       "name": "Claude Code",
       "color": "#6E56CF",
-      "costUSD": 0,
+      "costUSD": 248.02,
       "credits": 0,
-      "tokens": 0,
-      "dates": 0,
-      "files": []
+      "tokens": 267596431,
+      "dates": 2,
+      "files": [
+        "data/claude-code.json"
+      ]
     },
     {
       "id": "codex",
@@ -25,7 +30,9 @@
       "credits": 0,
       "tokens": 0,
       "dates": 0,
-      "files": []
+      "files": [
+        "data/codex.json"
+      ]
     },
     {
       "id": "opencode",
@@ -35,7 +42,9 @@
       "credits": 0,
       "tokens": 0,
       "dates": 0,
-      "files": []
+      "files": [
+        "data/opencode.json"
+      ]
     },
     {
       "id": "pi",
@@ -45,7 +54,9 @@
       "credits": 0,
       "tokens": 0,
       "dates": 0,
-      "files": []
+      "files": [
+        "data/pi.json"
+      ]
     },
     {
       "id": "amp",
@@ -55,11 +66,64 @@
       "credits": 0,
       "tokens": 0,
       "dates": 0,
-      "files": []
+      "files": [
+        "data/amp.json"
+      ]
     }
   ],
-  "daily": [],
-  "inputFiles": [],
-  "skippedFiles": [],
+  "daily": [
+    {
+      "date": "2026-04-21",
+      "costUSD": 170.94,
+      "credits": 0,
+      "tokens": 164172282,
+      "tools": {
+        "claude-code": {
+          "name": "Claude Code",
+          "costUSD": 170.94343024999995,
+          "credits": 0,
+          "tokens": 164172282
+        }
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "costUSD": 77.07,
+      "credits": 0,
+      "tokens": 103424149,
+      "tools": {
+        "claude-code": {
+          "name": "Claude Code",
+          "costUSD": 77.07271749999998,
+          "credits": 0,
+          "tokens": 103424149
+        }
+      }
+    }
+  ],
+  "inputFiles": [
+    "data/amp.json",
+    "data/claude-code.json",
+    "data/codex.json",
+    "data/opencode.json",
+    "data/pi.json"
+  ],
+  "skippedFiles": [
+    {
+      "file": "data/amp.json",
+      "tool": "amp",
+      "reason": "no_daily_rows"
+    },
+    {
+      "file": "data/opencode.json",
+      "tool": "opencode",
+      "reason": "no_daily_rows"
+    },
+    {
+      "file": "data/pi.json",
+      "tool": "pi",
+      "reason": "no_daily_rows"
+    }
+  ],
   "warnings": []
 }
