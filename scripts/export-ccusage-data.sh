@@ -109,7 +109,9 @@ export_tool() {
   local id package label
   IFS='|' read -r id package label <<< "$spec"
 
-  local outfile="$DATA_DIR/$id.json"
+  local hostname_suffix
+  hostname_suffix=$(hostname -s)
+  local outfile="$DATA_DIR/$id-$hostname_suffix.json"
   local tmpfile errfile exit_code
   tmpfile="$(mktemp "${DATA_DIR}/.tmp.${id}.XXXXXX")"
   errfile="$(mktemp "${DATA_DIR}/.err.${id}.XXXXXX")"
