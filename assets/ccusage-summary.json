@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-04-26T21:15:10.402Z",
+  "dateRange": null,
+  "totals": {
+    "costUSD": 0,
+    "credits": 0,
+    "tokens": 0
+  },
+  "tools": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "color": "#6E56CF",
+      "costUSD": 0,
+      "credits": 0,
+      "tokens": 0,
+      "dates": 0,
+      "files": []
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "color": "#10A37F",
+      "costUSD": 0,
+      "credits": 0,
+      "tokens": 0,
+      "dates": 0,
+      "files": []
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "color": "#F97316",
+      "costUSD": 0,
+      "credits": 0,
+      "tokens": 0,
+      "dates": 0,
+      "files": []
+    },
+    {
+      "id": "pi",
+      "name": "Pi",
+      "color": "#0EA5E9",
+      "costUSD": 0,
+      "credits": 0,
+      "tokens": 0,
+      "dates": 0,
+      "files": []
+    },
+    {
+      "id": "amp",
+      "name": "Amp",
+      "color": "#EC4899",
+      "costUSD": 0,
+      "credits": 0,
+      "tokens": 0,
+      "dates": 0,
+      "files": []
+    }
+  ],
+  "daily": [],
+  "inputFiles": [],
+  "skippedFiles": [],
+  "warnings": []
+}

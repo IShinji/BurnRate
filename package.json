@@ -1,0 +1,12 @@
+{
+  "name": "burnrate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export:ccusage": "bash scripts/export-ccusage-data.sh",
+    "generate:card": "node scripts/generate-ccusage-card.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
