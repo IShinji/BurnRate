@@ -1,6 +1,11 @@
-# BurnRate
+# BurnRate (燃耗统计)
+
+[English](./README.md) | [中文说明](./README.md#中文说明) | [使用指南 (GUIDE)](./GUIDE.md)
 
 Generate a GitHub profile SVG card from the ccusage family of local JSON exports.
+从 ccusage 系列本地 JSON 导出数据生成 GitHub 个人主页 SVG 统计卡片。
+
+---
 
 ## Usage
 
@@ -20,41 +25,52 @@ bunx @ccusage/pi@latest daily --json
 bunx @ccusage/amp@latest daily --json
 ```
 
-If a tool has no local data or fails temporarily, the exporter writes a small placeholder JSON so the card generator can continue.
-
-## Options
-
-Set environment variables before running the exporter:
-
-```bash
-CCUSAGE_SINCE=20260401 CCUSAGE_TIMEZONE=UTC bun run export:ccusage
-```
-
-Available variables:
-
-- `CCUSAGE_REPORT`: report command, defaults to `daily`
-- `CCUSAGE_SINCE`: optional start date, such as `20260401`
-- `CCUSAGE_UNTIL`: optional end date, such as `20260426`
-- `CCUSAGE_TIMEZONE`: optional timezone passed to supported CLIs
-- `CCUSAGE_LOCALE`: optional locale passed to supported CLIs
-- `CCUSAGE_MODE`: optional cost mode passed to supported CLIs
-- `CCUSAGE_EXTRA_ARGS`: extra CLI flags
-- `CCUSAGE_COMMIT=0`: export without committing `data/`
-- `CCUSAGE_PUSH=0`: commit without pushing
-
 Generate the card locally:
 
 ```bash
 bun run generate:card
 ```
 
-The GitHub Action regenerates and commits:
+---
 
-- `assets/ccusage-summary.json`
-- `assets/ccusage-card.svg`
+## 中文说明
 
-Embed the card in a GitHub profile README:
+### 使用方法
+
+1. **导出数据**:
+   ```bash
+   bun run export:ccusage
+   ```
+   这会从你本地安装的 `ccusage` 工具中收集统计信息并存入 `data/` 目录。
+
+2. **生成卡片**:
+   ```bash
+   bun run generate:card
+   ```
+   这会根据导出的数据生成 `assets/ccusage-card.svg` 文件。
+
+3. **详细配置**:
+   请参考 [使用指南 (GUIDE.md)](./GUIDE.md) 查看环境变量和进阶用法。
+
+### 引用方式
+
+将生成的卡片嵌入你的 GitHub Profile：
 
 ```markdown
-![ccusage stats](https://raw.githubusercontent.com/<owner>/<repo>/<branch>/assets/ccusage-card.svg)
+![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
 ```
+
+## Options / 选项
+
+Set environment variables before running the exporter:
+在运行导出脚本前设置环境变量：
+
+```bash
+CCUSAGE_SINCE=20260401 CCUSAGE_TIMEZONE=UTC bun run export:ccusage
+```
+
+- `CCUSAGE_SINCE`: optional start date (e.g. `20260401`) / 可选开始日期
+- `CCUSAGE_UNTIL`: optional end date (e.g. `20260426`) / 可选结束日期
+- `CCUSAGE_TIMEZONE`: optional timezone / 可选时区
+- `CCUSAGE_COMMIT=0`: export without committing / 导出但不提交
+- `CCUSAGE_PUSH=0`: commit without pushing / 提交但不推送
