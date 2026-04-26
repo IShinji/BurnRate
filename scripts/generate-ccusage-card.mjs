@@ -179,6 +179,12 @@ function inferTool(file, json) {
     if (TOOL_BY_ALIAS.has(normalized)) {
       return TOOL_BY_ALIAS.get(normalized);
     }
+    // Check if it starts with any known tool ID/alias (for multi-machine support)
+    for (const [alias, tool] of TOOL_BY_ALIAS.entries()) {
+      if (normalized.startsWith(alias + '-')) {
+        return tool;
+      }
+    }
   }
 
   const fallbackId = normalizeId(path.basename(file, '.json')) || 'unknown';

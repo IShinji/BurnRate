@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-26T21:40:41.739Z",
+  "generatedAt": "2026-04-26T21:44:06.633Z",
   "dateRange": {
     "start": "2026-04-11",
     "end": "2026-04-26"
   },
   "totals": {
-    "costUSD": 1102.76,
+    "costUSD": 551.38,
     "credits": 0,
-    "tokens": 1420193662
+    "tokens": 710096831
   },
   "tools": [
     {
@@ -19,7 +19,7 @@
       "tokens": 267596431,
       "dates": 2,
       "files": [
-        "data/claude-code.json"
+        "data/claude-code-Shinji-MacBook-M4.json"
       ],
       "models": [
         {
@@ -38,7 +38,7 @@
       "tokens": 442500400,
       "dates": 8,
       "files": [
-        "data/codex.json"
+        "data/codex-Shinji-MacBook-M4.json"
       ],
       "models": [
         {
@@ -62,7 +62,7 @@
       "tokens": 0,
       "dates": 0,
       "files": [
-        "data/opencode.json"
+        "data/opencode-Shinji-MacBook-M4.json"
       ],
       "models": []
     },
@@ -75,7 +75,7 @@
       "tokens": 0,
       "dates": 0,
       "files": [
-        "data/pi.json"
+        "data/pi-Shinji-MacBook-M4.json"
       ],
       "models": []
     },
@@ -88,89 +88,7 @@
       "tokens": 0,
       "dates": 0,
       "files": [
-        "data/amp.json"
-      ],
-      "models": []
-    },
-    {
-      "id": "amp-shinji-macbook-m4",
-      "name": "Amp Shinji Macbook M4",
-      "color": "#64748B",
-      "costUSD": 0,
-      "credits": 0,
-      "tokens": 0,
-      "dates": 0,
-      "files": [
         "data/amp-Shinji-MacBook-M4.json"
-      ],
-      "models": []
-    },
-    {
-      "id": "claude-code-shinji-macbook-m4",
-      "name": "Claude Code Shinji Macbook M4",
-      "color": "#64748B",
-      "costUSD": 248.02,
-      "credits": 0,
-      "tokens": 267596431,
-      "dates": 2,
-      "files": [
-        "data/claude-code-Shinji-MacBook-M4.json"
-      ],
-      "models": [
-        {
-          "name": "claude-opus-4-7",
-          "costUSD": 248.02,
-          "tokens": 267596431
-        }
-      ]
-    },
-    {
-      "id": "codex-shinji-macbook-m4",
-      "name": "Codex Shinji Macbook M4",
-      "color": "#64748B",
-      "costUSD": 303.36,
-      "credits": 0,
-      "tokens": 442500400,
-      "dates": 8,
-      "files": [
-        "data/codex-Shinji-MacBook-M4.json"
-      ],
-      "models": [
-        {
-          "name": "gpt-5.5",
-          "costUSD": 258.57,
-          "tokens": 346237173
-        },
-        {
-          "name": "gpt-5.4",
-          "costUSD": 44.79,
-          "tokens": 96263227
-        }
-      ]
-    },
-    {
-      "id": "opencode-shinji-macbook-m4",
-      "name": "Opencode Shinji Macbook M4",
-      "color": "#64748B",
-      "costUSD": 0,
-      "credits": 0,
-      "tokens": 0,
-      "dates": 0,
-      "files": [
-        "data/opencode-Shinji-MacBook-M4.json"
-      ],
-      "models": []
-    },
-    {
-      "id": "pi-shinji-macbook-m4",
-      "name": "Pi Shinji Macbook M4",
-      "color": "#64748B",
-      "costUSD": 0,
-      "credits": 0,
-      "tokens": 0,
-      "dates": 0,
-      "files": [
-        "data/pi-Shinji-MacBook-M4.json"
       ],
       "models": []
     }
@@ -178,22 +96,10 @@
   "daily": [
     {
       "date": "2026-04-11",
-      "costUSD": 38.3,
+      "costUSD": 19.15,
       "credits": 0,
-      "tokens": 78630256,
+      "tokens": 39315128,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 19.151024,
-          "credits": 0,
-          "tokens": 39315128,
-          "models": {
-            "gpt-5.4": {
-              "costUSD": 19.151024,
-              "tokens": 39315128
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 19.151024,
@@ -207,8 +113,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 38.3,
-      "cumulativeTokens": 78630256,
+      "cumulativeCostUSD": 19.15,
+      "cumulativeTokens": 39315128,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 0,
@@ -220,22 +126,10 @@
     },
     {
       "date": "2026-04-12",
-      "costUSD": 12.22,
+      "costUSD": 6.11,
       "credits": 0,
-      "tokens": 25060900,
+      "tokens": 12530450,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 6.1110584999999995,
-          "credits": 0,
-          "tokens": 12530450,
-          "models": {
-            "gpt-5.4": {
-              "costUSD": 6.1110584999999995,
-              "tokens": 12530450
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 6.1110584999999995,
@@ -249,8 +143,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 50.52,
-      "cumulativeTokens": 103691156,
+      "cumulativeCostUSD": 25.26,
+      "cumulativeTokens": 51845578,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 0,
@@ -262,22 +156,10 @@
     },
     {
       "date": "2026-04-16",
-      "costUSD": 4.95,
+      "costUSD": 2.48,
       "credits": 0,
-      "tokens": 8481700,
+      "tokens": 4240850,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 2.476618,
-          "credits": 0,
-          "tokens": 4240850,
-          "models": {
-            "gpt-5.4": {
-              "costUSD": 2.476618,
-              "tokens": 4240850
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 2.476618,
@@ -291,8 +173,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 55.48,
-      "cumulativeTokens": 112172856,
+      "cumulativeCostUSD": 27.74,
+      "cumulativeTokens": 56086428,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 0,
@@ -304,22 +186,10 @@
     },
     {
       "date": "2026-04-20",
-      "costUSD": 19.15,
+      "costUSD": 9.57,
       "credits": 0,
-      "tokens": 47174494,
+      "tokens": 23587247,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 9.5740485,
-          "credits": 0,
-          "tokens": 23587247,
-          "models": {
-            "gpt-5.4": {
-              "costUSD": 9.5740485,
-              "tokens": 23587247
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 9.5740485,
@@ -333,8 +203,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 74.63,
-      "cumulativeTokens": 159347350,
+      "cumulativeCostUSD": 37.31,
+      "cumulativeTokens": 79673675,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 0,
@@ -346,22 +216,10 @@
     },
     {
       "date": "2026-04-21",
-      "costUSD": 356.84,
+      "costUSD": 178.42,
       "credits": 0,
-      "tokens": 361523668,
+      "tokens": 180761834,
       "tools": {
-        "claude-code-shinji-macbook-m4": {
-          "name": "Claude Code Shinji Macbook M4",
-          "costUSD": 170.94343024999995,
-          "credits": 0,
-          "tokens": 164172282,
-          "models": {
-            "claude-opus-4-7": {
-              "costUSD": 170.94343024999995,
-              "tokens": 164172282
-            }
-          }
-        },
         "claude-code": {
           "name": "Claude Code",
           "costUSD": 170.94343024999995,
@@ -371,18 +229,6 @@
             "claude-opus-4-7": {
               "costUSD": 170.94343024999995,
               "tokens": 164172282
-            }
-          }
-        },
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 7.4744625000000005,
-          "credits": 0,
-          "tokens": 16589552,
-          "models": {
-            "gpt-5.4": {
-              "costUSD": 7.4744625000000005,
-              "tokens": 16589552
             }
           }
         },
@@ -399,8 +245,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 431.46,
-      "cumulativeTokens": 520871018,
+      "cumulativeCostUSD": 215.73,
+      "cumulativeTokens": 260435509,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 164172282,
@@ -412,22 +258,10 @@
     },
     {
       "date": "2026-04-22",
-      "costUSD": 154.15,
+      "costUSD": 77.07,
       "credits": 0,
-      "tokens": 206848298,
+      "tokens": 103424149,
       "tools": {
-        "claude-code-shinji-macbook-m4": {
-          "name": "Claude Code Shinji Macbook M4",
-          "costUSD": 77.07271749999998,
-          "credits": 0,
-          "tokens": 103424149,
-          "models": {
-            "claude-opus-4-7": {
-              "costUSD": 77.07271749999998,
-              "tokens": 103424149
-            }
-          }
-        },
         "claude-code": {
           "name": "Claude Code",
           "costUSD": 77.07271749999998,
@@ -441,8 +275,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 585.61,
-      "cumulativeTokens": 727719316,
+      "cumulativeCostUSD": 292.8,
+      "cumulativeTokens": 363859658,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 267596431,
@@ -454,22 +288,10 @@
     },
     {
       "date": "2026-04-24",
-      "costUSD": 127.23,
+      "costUSD": 63.62,
       "credits": 0,
-      "tokens": 177523498,
+      "tokens": 88761749,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 63.615731999999994,
-          "credits": 0,
-          "tokens": 88761749,
-          "models": {
-            "gpt-5.5": {
-              "costUSD": 63.615731999999994,
-              "tokens": 88761749
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 63.615731999999994,
@@ -483,8 +305,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 712.84,
-      "cumulativeTokens": 905242814,
+      "cumulativeCostUSD": 356.42,
+      "cumulativeTokens": 452621407,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 267596431,
@@ -496,22 +318,10 @@
     },
     {
       "date": "2026-04-25",
-      "costUSD": 261.33,
+      "costUSD": 130.66,
       "credits": 0,
-      "tokens": 341662920,
+      "tokens": 170831460,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 130.663397,
-          "credits": 0,
-          "tokens": 170831460,
-          "models": {
-            "gpt-5.5": {
-              "costUSD": 130.663397,
-              "tokens": 170831460
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 130.663397,
@@ -525,8 +335,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 974.16,
-      "cumulativeTokens": 1246905734,
+      "cumulativeCostUSD": 487.08,
+      "cumulativeTokens": 623452867,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 267596431,
@@ -538,22 +348,10 @@
     },
     {
       "date": "2026-04-26",
-      "costUSD": 128.58,
+      "costUSD": 64.29,
       "credits": 0,
-      "tokens": 173287928,
+      "tokens": 86643964,
       "tools": {
-        "codex-shinji-macbook-m4": {
-          "name": "Codex Shinji Macbook M4",
-          "costUSD": 64.290299,
-          "credits": 0,
-          "tokens": 86643964,
-          "models": {
-            "gpt-5.5": {
-              "costUSD": 64.290299,
-              "tokens": 86643964
-            }
-          }
-        },
         "codex": {
           "name": "Codex",
           "costUSD": 64.290299,
@@ -567,8 +365,8 @@
           }
         }
       },
-      "cumulativeCostUSD": 1102.75,
-      "cumulativeTokens": 1420193662,
+      "cumulativeCostUSD": 551.37,
+      "cumulativeTokens": 710096831,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 267596431,
@@ -581,44 +379,24 @@
   ],
   "inputFiles": [
     "data/amp-Shinji-MacBook-M4.json",
-    "data/amp.json",
     "data/claude-code-Shinji-MacBook-M4.json",
-    "data/claude-code.json",
     "data/codex-Shinji-MacBook-M4.json",
-    "data/codex.json",
     "data/opencode-Shinji-MacBook-M4.json",
-    "data/opencode.json",
-    "data/pi-Shinji-MacBook-M4.json",
-    "data/pi.json"
+    "data/pi-Shinji-MacBook-M4.json"
   ],
   "skippedFiles": [
     {
       "file": "data/amp-Shinji-MacBook-M4.json",
-      "tool": "amp-shinji-macbook-m4",
-      "reason": "no_daily_rows"
-    },
-    {
-      "file": "data/amp.json",
       "tool": "amp",
       "reason": "no_daily_rows"
     },
     {
       "file": "data/opencode-Shinji-MacBook-M4.json",
-      "tool": "opencode-shinji-macbook-m4",
-      "reason": "no_daily_rows"
-    },
-    {
-      "file": "data/opencode.json",
       "tool": "opencode",
       "reason": "no_daily_rows"
     },
     {
       "file": "data/pi-Shinji-MacBook-M4.json",
-      "tool": "pi-shinji-macbook-m4",
-      "reason": "no_daily_rows"
-    },
-    {
-      "file": "data/pi.json",
       "tool": "pi",
       "reason": "no_daily_rows"
     }
