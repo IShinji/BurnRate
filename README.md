@@ -1,6 +1,6 @@
 # BurnRate (燃耗统计)
 
-[English](./README.md) | [中文说明](./README.md#中文说明) | [使用指南 (GUIDE)](./GUIDE.md)
+[English](#usage) | [中文说明](#中文说明) | [使用指南 (GUIDE)](./GUIDE.md)
 
 Generate a GitHub profile SVG card from the ccusage family of local JSON exports.
 从 ccusage 系列本地 JSON 导出数据生成 GitHub 个人主页 SVG 统计卡片。
@@ -57,7 +57,7 @@ bun run generate:card
 将生成的卡片嵌入你的 GitHub Profile：
 
 ```markdown
-![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
+![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BunRate/main/assets/ccusage-card.svg)
 ```
 
 ## Options / 选项
