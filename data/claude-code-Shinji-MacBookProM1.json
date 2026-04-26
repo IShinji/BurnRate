@@ -1,0 +1,11 @@
+{
+  "tool": "claude-code",
+  "package": "ccusage@latest",
+  "label": "Claude Code",
+  "generatedAt": "2026-04-26T21:47:26.068Z",
+  "ok": false,
+  "reason": "command_failed",
+  "exitCode": 1,
+  "stderr": "Resolving dependencies\nResolved, downloaded and extracted [4]\nSaved lockfile\nfile:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/data-loader-9ESMosno.js:5366\n\tif (paths.length === 0) throw new Error(`No valid Claude data directories found. Please ensure at least one of the following exists:\n\t                              ^\n\nError: No valid Claude data directories found. Please ensure at least one of the following exists:\n- /Users/wisely/.config/claude/projects\n- /Users/wisely/.claude/projects\n- Or set CLAUDE_CONFIG_DIR environment variable to valid directory path(s) containing a 'projects' subdirectory\n    at getClaudePaths (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/data-loader-9ESMosno.js:5366:32)\n    at getConfigSearchPaths (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:891:56)\n    at loadConfig (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:943:27)\n    at Object.run (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:1739:50)\n    at executeCommand (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:879:17)\n    at cli (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:792:8)\n    at async run (file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:3610:2)\n    at async file:///private/var/folders/q3/dzk4m73n653d0mb5fzkls3vh0000gn/T/bunx-501-ccusage@latest/node_modules/ccusage/dist/index.js:3618:1\n\nNode.js v24.14.0",
+  "data": []
+}
