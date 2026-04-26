@@ -301,6 +301,13 @@ function extractDate(row) {
     return `${monthMatch[1]}-01`;
   }
 
+  try {
+    const d = new Date(value);
+    if (!isNaN(d.getTime())) {
+      return d.toISOString().split('T')[0];
+    }
+  } catch (e) {}
+
   return null;
 }
 
@@ -447,6 +454,7 @@ function aggregate(inputs, warnings) {
           costUSD: 0,
           credits: 0,
           tokens: 0,
+          models: {},
         };
       }
 
@@ -456,6 +464,36 @@ function aggregate(inputs, warnings) {
       day.tools[tool.id].costUSD += costUSD;
       day.tools[tool.id].credits += credits;
       day.tools[tool.id].tokens += tokens;
+
+      // Extract model data
+      const models = [];
+      if (Array.isArray(row.modelBreakdowns)) {
+        models.push(...row.modelBreakdowns.map(m => ({ name: m.modelName, costUSD: extractCost(m), tokens: extractTokens(m) })));
+      } else if (row.models && typeof row.models === 'object') {
+        const modelEntries = Object.entries(row.models);
+        const totalModelTokens = modelEntries.reduce((sum, [_, m]) => sum + extractTokens(m), 0) || 1;
+        for (const [name, m] of modelEntries) {
+          let mCost = extractCost(m);
+          if (mCost === 0 && costUSD > 0) {
+            mCost = costUSD * (extractTokens(m) / totalModelTokens);
+          }
+          models.push({ name, costUSD: mCost, tokens: extractTokens(m) });
+        }
+      } else if (Array.isArray(row.modelsUsed) && row.modelsUsed.length > 0) {
+        // Fallback if we only have names but no per-model breakdown in the row
+        const share = 1 / row.modelsUsed.length;
+        for (const name of row.modelsUsed) {
+          models.push({ name, costUSD: costUSD * share, tokens: tokens * share });
+        }
+      }
+
+      for (const m of models) {
+        if (!day.tools[tool.id].models[m.name]) {
+          day.tools[tool.id].models[m.name] = { costUSD: 0, tokens: 0 };
+        }
+        day.tools[tool.id].models[m.name].costUSD += m.costUSD;
+        day.tools[tool.id].models[m.name].tokens += m.tokens;
+      }
 
       toolTotal.costUSD += costUSD;
       toolTotal.credits += credits;
@@ -475,12 +513,33 @@ function aggregate(inputs, warnings) {
       tokens: Math.round(day.tokens),
     }));
 
-  const toolSummaries = [...tools.values()].map((tool) => ({
-    ...tool,
-    costUSD: round(tool.costUSD),
-    credits: round(tool.credits),
-    tokens: Math.round(tool.tokens),
-  }));
+  const toolSummaries = [...tools.values()].map((tool) => {
+    // Collect models across all days for this tool
+    const modelsMap = new Map();
+    for (const day of daily) {
+      const toolData = day.tools[tool.id];
+      if (toolData && toolData.models) {
+        for (const [name, m] of Object.entries(toolData.models)) {
+          if (!modelsMap.has(name)) {
+            modelsMap.set(name, { name, costUSD: 0, tokens: 0 });
+          }
+          const mTotal = modelsMap.get(name);
+          mTotal.costUSD += m.costUSD;
+          mTotal.tokens += m.tokens;
+        }
+      }
+    }
+
+    return {
+      ...tool,
+      costUSD: round(tool.costUSD),
+      credits: round(tool.credits),
+      tokens: Math.round(tool.tokens),
+      models: [...modelsMap.values()]
+        .sort((a, b) => b.costUSD - a.costUSD || b.tokens - a.tokens)
+        .map(m => ({ ...m, costUSD: round(m.costUSD), tokens: Math.round(m.tokens) })),
+    };
+  });
 
   const totals = {
     costUSD: round(toolSummaries.reduce((sum, tool) => sum + tool.costUSD, 0)),
@@ -547,144 +606,156 @@ function xml(value) {
 }
 
 function renderCard(summary, title) {
-  const width = 900;
-  const height = 500;
-  const margin = 36;
-  const barX = margin;
-  const barY = 176;
-  const barWidth = width - margin * 2;
-  const barHeight = 18;
+  const width = 1000;
+  const height = 700;
+  const margin = 40;
   const shareBasis = summary.totals.costUSD > 0 ? 'costUSD' : 'tokens';
   const shareTotal = summary.totals[shareBasis] || 0;
   const tools = [...summary.tools].sort((a, b) => (b[shareBasis] || 0) - (a[shareBasis] || 0));
   const nonZeroTools = tools.filter((tool) => (tool.costUSD || tool.tokens || tool.credits) > 0);
-  const rows = nonZeroTools.length > 0 ? nonZeroTools : tools;
-
+  
   const rangeText = summary.dateRange
     ? `${summary.dateRange.start} to ${summary.dateRange.end}`
     : 'No exported usage data yet';
   const updated = new Date(summary.generatedAt).toISOString().replace('T', ' ').slice(0, 16);
-  const shareLabel = shareBasis === 'costUSD' ? 'Cost share' : 'Token share';
   const subtitle = `${rangeText} / updated ${updated} UTC`;
 
-  let currentX = barX;
-  const segments = [];
-  for (const tool of tools) {
-    const value = shareTotal > 0 ? tool[shareBasis] || 0 : 0;
-    const segmentWidth = shareTotal > 0 ? (value / shareTotal) * barWidth : 0;
-    if (segmentWidth < 1) {
-      continue;
-    }
-
-    segments.push(
-      `<rect x="${currentX.toFixed(2)}" y="${barY}" width="${segmentWidth.toFixed(2)}" height="${barHeight}" rx="9" fill="${tool.color}"/>`,
-    );
-    currentX += segmentWidth;
-  }
-
-  const rowMarkup =
-    nonZeroTools.length === 0
-      ? ''
-      : rows
-          .slice(0, 5)
-          .map((tool, index) => {
-            const y = 236 + index * 34;
-            const percent = shareTotal > 0 ? ((tool[shareBasis] || 0) / shareTotal) * 100 : 0;
-            return `
-        <g transform="translate(${margin}, ${y})">
-          <circle cx="8" cy="8" r="6" fill="${tool.color}"/>
-          <text x="24" y="13" class="tool">${xml(tool.name)}</text>
-          <text x="250" y="13" class="metric">${formatPercent(percent)}</text>
-          <text x="390" y="13" class="metric">${xml(formatUsd(tool.costUSD))}</text>
-          <text x="535" y="13" class="muted">${xml(formatCompact(tool.tokens))} tokens</text>
-          <text x="710" y="13" class="muted">${xml(formatCompact(tool.credits))} credits</text>
-        </g>`;
-          })
-          .join('');
-
-  const sparkline = renderSparkline(summary.daily, {
+  // Chart data
+  const chartHeight = 200;
+  const chartY = 460;
+  const sparkline = renderLineChart(summary.daily, {
     x: margin,
-    y: 440,
+    y: chartY,
     width: width - margin * 2,
-    height: 28,
+    height: chartHeight,
     basis: shareBasis,
+    tools: summary.tools
   });
 
-  const emptyState =
-    nonZeroTools.length === 0
-      ? `<text x="${margin}" y="252" class="empty">Run scripts/export-ccusage-data.sh to export local usage JSON into data/.</text>`
-      : '';
+  const toolStats = nonZeroTools.slice(0, 4).map((tool, index) => {
+    const x = margin + (index % 2) * 460;
+    const y = 240 + Math.floor(index / 2) * 100;
+    const modelList = tool.models.slice(0, 3).map(m => `<text class="model-item">${xml(m.name)}: ${xml(formatUsd(m.costUSD))}</text>`).join('');
+    
+    return `
+      <g transform="translate(${x}, ${y})">
+        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="24" cy="24" r="8" fill="${tool.color}"/>
+        <text x="44" y="29" class="tool-name">${xml(tool.name)}</text>
+        <text x="24" y="58" class="tool-metric">${xml(formatUsd(tool.costUSD))}</text>
+        <text x="140" y="57" class="tool-muted">${xml(formatCompact(tool.tokens))} tokens</text>
+        <g transform="translate(240, 20)">
+          ${tool.models.slice(0, 3).map((m, i) => `
+            <text x="0" y="${i * 20}" class="model-item">${xml(m.name.length > 20 ? m.name.slice(0, 17) + '...' : m.name)}</text>
+            <text x="160" y="${i * 20}" class="model-item" text-anchor="end">${xml(formatUsd(m.costUSD))}</text>
+          `).join('')}
+        </g>
+      </g>
+    `;
+  }).join('');
 
-  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">${xml(title)}</title>
-  <desc id="desc">Cost and usage summary generated from ccusage JSON exports.</desc>
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#F8FAFC"/>
-      <stop offset="1" stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#F1F5F9"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.10"/>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.05"/>
     </filter>
   </defs>
   <style>
-    .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .subtitle { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
-    .label { font: 700 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #64748B; }
-    .total { font: 800 42px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .stat { font: 700 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
-    .muted { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
-    .tool { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1E293B; }
-    .metric { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .empty { font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
+    .title { font: 800 32px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
+    .subtitle { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
+    .label { font: 700 12px -apple-system, sans-serif; letter-spacing: 0.05em; text-transform: uppercase; fill: #94A3B8; }
+    .total-val { font: 800 48px -apple-system, sans-serif; fill: #0F172A; }
+    .stat-val { font: 700 24px -apple-system, sans-serif; fill: #1E293B; }
+    .tool-name { font: 700 18px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-metric { font: 700 22px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-muted { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
+    .model-item { font: 500 12px -apple-system, sans-serif; fill: #475569; }
+    .chart-label { font: 500 11px -apple-system, sans-serif; fill: #94A3B8; }
   </style>
-  <rect x="10" y="10" width="${width - 20}" height="${height - 20}" rx="22" fill="url(#bg)" filter="url(#shadow)"/>
-  <rect x="10.5" y="10.5" width="${width - 21}" height="${height - 21}" rx="21.5" stroke="#CBD5E1"/>
-  <text x="${margin}" y="58" class="title">${xml(title)}</text>
-  <text x="${margin}" y="82" class="subtitle">${xml(subtitle)}</text>
 
-  <text x="${margin}" y="126" class="label">Total cost</text>
-  <text x="${margin}" y="162" class="total">${xml(formatUsd(summary.totals.costUSD))}</text>
-  <text x="380" y="126" class="label">Total tokens</text>
-  <text x="380" y="158" class="stat">${xml(formatNumber(summary.totals.tokens))}</text>
-  <text x="620" y="126" class="label">Credits</text>
-  <text x="620" y="158" class="stat">${xml(formatNumber(summary.totals.credits))}</text>
+  <rect width="${width}" height="${height}" rx="24" fill="url(#bg)"/>
+  
+  <text x="${margin}" y="70" class="title">${xml(title)}</text>
+  <text x="${margin}" y="95" class="subtitle">${xml(subtitle)}</text>
 
-  <rect x="${barX}" y="${barY}" width="${barWidth}" height="${barHeight}" rx="9" fill="#E2E8F0"/>
-  ${segments.join('\n  ')}
-  <text x="${margin}" y="218" class="label">${xml(shareLabel)}</text>
-  <text x="426" y="218" class="label">Cost</text>
-  <text x="571" y="218" class="label">Tokens</text>
-  <text x="746" y="218" class="label">Credits</text>
-  ${emptyState}
-  ${rowMarkup}
+  <g transform="translate(${margin}, 140)">
+    <text y="0" class="label">Total Burn Rate</text>
+    <text y="45" class="total-val">${xml(formatUsd(summary.totals.costUSD))}</text>
+  </g>
+
+  <g transform="translate(400, 140)">
+    <text y="0" class="label">Total Tokens</text>
+    <text y="35" class="stat-val">${xml(formatNumber(summary.totals.tokens))}</text>
+  </g>
+
+  <g transform="translate(700, 140)">
+    <text y="0" class="label">Credits Used</text>
+    <text y="35" class="stat-val">${xml(formatNumber(summary.totals.credits))}</text>
+  </g>
+
+  ${toolStats}
+
+  <g transform="translate(${margin}, ${chartY - 30})">
+    <text y="0" class="label">Daily Spend Trend (USD)</text>
+  </g>
   ${sparkline}
-</svg>
-`;
+</svg>`;
 }
 
-function renderSparkline(daily, options) {
-  const { x, y, width, height, basis } = options;
-  const values = daily.slice(-30).map((day) => Number(day[basis]) || 0);
+function renderLineChart(daily, options) {
+  const { x, y, width, height, tools } = options;
+  if (daily.length < 2) return '';
 
-  if (values.length < 2 || Math.max(...values) <= 0) {
-    return `<line x1="${x}" y1="${y + height}" x2="${x + width}" y2="${y + height}" stroke="#CBD5E1" stroke-width="2"/><text x="${x}" y="${y - 8}" class="label">Recent trend</text>`;
-  }
+  const maxCost = Math.max(...daily.map(d => d.costUSD), 0.01) * 1.2;
+  const stepX = width / (daily.length - 1);
 
-  const max = Math.max(...values);
-  const step = width / (values.length - 1);
-  const points = values
-    .map((value, index) => {
-      const px = x + index * step;
-      const py = y + height - (value / max) * height;
-      return `${px.toFixed(2)},${py.toFixed(2)}`;
-    })
-    .join(' ');
+  // Y-axis grid
+  const grid = [0, 0.25, 0.5, 0.75, 1].map(p => {
+    const gy = y + height - p * height;
+    const val = (p * maxCost).toFixed(0);
+    return `<line x1="${x}" y1="${gy}" x2="${x + width}" y2="${gy}" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="${x - 5}" y="${gy + 4}" text-anchor="end" class="chart-label">$${val}</text>`;
+  }).join('');
 
-  return `
-    <text x="${x}" y="${y - 8}" class="label">Recent trend</text>
-    <polyline points="${points}" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="${x}" y1="${y + height}" x2="${x + width}" y2="${y + height}" stroke="#CBD5E1" stroke-width="2"/>`;
+  // Date labels (every 5 days or first/last)
+  const labels = daily.map((d, i) => {
+    if (i === 0 || i === daily.length - 1 || i % Math.max(1, Math.floor(daily.length / 6)) === 0) {
+      return `<text x="${x + i * stepX}" y="${y + height + 20}" text-anchor="middle" class="chart-label">${d.date.slice(5)}</text>`;
+    }
+    return '';
+  }).join('');
+
+  // Paths for each tool
+  const paths = tools.filter(t => t.costUSD > 0).map(tool => {
+    const points = daily.map((d, i) => {
+      const val = d.tools[tool.id]?.costUSD || 0;
+      return { x: x + i * stepX, y: y + height - (val / maxCost) * height };
+    });
+
+    if (points.length < 2) return '';
+
+    // Create smooth path using cubic bezier
+    let d = `M ${points[0].x},${points[0].y}`;
+    for (let i = 0; i < points.length - 1; i++) {
+      const p0 = points[i];
+      const p1 = points[i + 1];
+      const cp1x = p0.x + (p1.x - p0.x) / 3;
+      const cp2x = p1.x - (p1.x - p0.x) / 3;
+      d += ` C ${cp1x},${p0.y} ${cp2x},${p1.y} ${p1.x},${p1.y}`;
+    }
+
+    const areaD = `${d} L ${points[points.length - 1].x},${y + height} L ${points[0].x},${y + height} Z`;
+
+    return `
+      <path d="${areaD}" fill="${tool.color}" fill-opacity="0.05"/>
+      <path d="${d}" stroke="${tool.color}" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    `;
+  }).join('');
+
+  return `<g>${grid}${labels}${paths}</g>`;
 }
 
 async function main() {

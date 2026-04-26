@@ -1,56 +1,87 @@
-<svg width="900" height="500" viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">ccusage Burn Rate</title>
-  <desc id="desc">Cost and usage summary generated from ccusage JSON exports.</desc>
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop stop-color="#F8FAFC"/>
-      <stop offset="1" stop-color="#EEF2FF"/>
+      <stop offset="1" stop-color="#F1F5F9"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.10"/>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.05"/>
     </filter>
   </defs>
   <style>
-    .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .subtitle { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
-    .label { font: 700 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; text-transform: uppercase; fill: #64748B; }
-    .total { font: 800 42px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .stat { font: 700 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
-    .muted { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
-    .tool { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1E293B; }
-    .metric { font: 700 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0F172A; }
-    .empty { font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748B; }
+    .title { font: 800 32px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #0F172A; }
+    .subtitle { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
+    .label { font: 700 12px -apple-system, sans-serif; letter-spacing: 0.05em; text-transform: uppercase; fill: #94A3B8; }
+    .total-val { font: 800 48px -apple-system, sans-serif; fill: #0F172A; }
+    .stat-val { font: 700 24px -apple-system, sans-serif; fill: #1E293B; }
+    .tool-name { font: 700 18px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-metric { font: 700 22px -apple-system, sans-serif; fill: #0F172A; }
+    .tool-muted { font: 500 14px -apple-system, sans-serif; fill: #64748B; }
+    .model-item { font: 500 12px -apple-system, sans-serif; fill: #475569; }
+    .chart-label { font: 500 11px -apple-system, sans-serif; fill: #94A3B8; }
   </style>
-  <rect x="10" y="10" width="880" height="480" rx="22" fill="url(#bg)" filter="url(#shadow)"/>
-  <rect x="10.5" y="10.5" width="879" height="479" rx="21.5" stroke="#CBD5E1"/>
-  <text x="36" y="58" class="title">ccusage Burn Rate</text>
-  <text x="36" y="82" class="subtitle">2026-04-21 to 2026-04-22 / updated 2026-04-26 21:22 UTC</text>
 
-  <text x="36" y="126" class="label">Total cost</text>
-  <text x="36" y="162" class="total">$248.02</text>
-  <text x="380" y="126" class="label">Total tokens</text>
-  <text x="380" y="158" class="stat">267,596,431</text>
-  <text x="620" y="126" class="label">Credits</text>
-  <text x="620" y="158" class="stat">0</text>
+  <rect width="1000" height="700" rx="24" fill="url(#bg)"/>
+  
+  <text x="40" y="70" class="title">ccusage Burn Rate</text>
+  <text x="40" y="95" class="subtitle">2026-04-11 to 2026-04-26 / updated 2026-04-26 21:25 UTC</text>
 
-  <rect x="36" y="176" width="828" height="18" rx="9" fill="#E2E8F0"/>
-  <rect x="36.00" y="176" width="828.00" height="18" rx="9" fill="#6E56CF"/>
-  <text x="36" y="218" class="label">Cost share</text>
-  <text x="426" y="218" class="label">Cost</text>
-  <text x="571" y="218" class="label">Tokens</text>
-  <text x="746" y="218" class="label">Credits</text>
+  <g transform="translate(40, 140)">
+    <text y="0" class="label">Total Burn Rate</text>
+    <text y="45" class="total-val">$551.38</text>
+  </g>
+
+  <g transform="translate(400, 140)">
+    <text y="0" class="label">Total Tokens</text>
+    <text y="35" class="stat-val">710,096,831</text>
+  </g>
+
+  <g transform="translate(700, 140)">
+    <text y="0" class="label">Credits Used</text>
+    <text y="35" class="stat-val">0</text>
+  </g>
+
   
-  
-        <g transform="translate(36, 236)">
-          <circle cx="8" cy="8" r="6" fill="#6E56CF"/>
-          <text x="24" y="13" class="tool">Claude Code</text>
-          <text x="250" y="13" class="metric">100.0%</text>
-          <text x="390" y="13" class="metric">$248.02</text>
-          <text x="535" y="13" class="muted">267.6M tokens</text>
-          <text x="710" y="13" class="muted">0 credits</text>
+      <g transform="translate(40, 240)">
+        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="24" cy="24" r="8" fill="#10A37F"/>
+        <text x="44" y="29" class="tool-name">Codex</text>
+        <text x="24" y="58" class="tool-metric">$303.36</text>
+        <text x="140" y="57" class="tool-muted">442.5M tokens</text>
+        <g transform="translate(240, 20)">
+          
+            <text x="0" y="0" class="model-item">gpt-5.5</text>
+            <text x="160" y="0" class="model-item" text-anchor="end">$258.57</text>
+          
+            <text x="0" y="20" class="model-item">gpt-5.4</text>
+            <text x="160" y="20" class="model-item" text-anchor="end">$44.79</text>
+          
         </g>
-  
-    <text x="36" y="432" class="label">Recent trend</text>
-    <polyline points="36.00,440.00 864.00,455.38" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="36" y1="468" x2="864" y2="468" stroke="#CBD5E1" stroke-width="2"/>
+      </g>
+    
+      <g transform="translate(500, 240)">
+        <rect width="440" height="90" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+        <circle cx="24" cy="24" r="8" fill="#6E56CF"/>
+        <text x="44" y="29" class="tool-name">Claude Code</text>
+        <text x="24" y="58" class="tool-metric">$248.02</text>
+        <text x="140" y="57" class="tool-muted">267.6M tokens</text>
+        <g transform="translate(240, 20)">
+          
+            <text x="0" y="0" class="model-item">claude-opus-4-7</text>
+            <text x="160" y="0" class="model-item" text-anchor="end">$248.02</text>
+          
+        </g>
+      </g>
+    
+
+  <g transform="translate(40, 430)">
+    <text y="0" class="label">Daily Spend Trend (USD)</text>
+  </g>
+  <g><line x1="40" y1="660" x2="960" y2="660" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="664" text-anchor="end" class="chart-label">$0</text><line x1="40" y1="610" x2="960" y2="610" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="614" text-anchor="end" class="chart-label">$54</text><line x1="40" y1="560" x2="960" y2="560" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="564" text-anchor="end" class="chart-label">$107</text><line x1="40" y1="510" x2="960" y2="510" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="514" text-anchor="end" class="chart-label">$161</text><line x1="40" y1="460" x2="960" y2="460" stroke="#E2E8F0" stroke-dasharray="4 4"/><text x="35" y="464" text-anchor="end" class="chart-label">$214</text><text x="40" y="680" text-anchor="middle" class="chart-label">04-11</text><text x="155" y="680" text-anchor="middle" class="chart-label">04-12</text><text x="270" y="680" text-anchor="middle" class="chart-label">04-16</text><text x="385" y="680" text-anchor="middle" class="chart-label">04-20</text><text x="500" y="680" text-anchor="middle" class="chart-label">04-21</text><text x="615" y="680" text-anchor="middle" class="chart-label">04-22</text><text x="730" y="680" text-anchor="middle" class="chart-label">04-24</text><text x="845" y="680" text-anchor="middle" class="chart-label">04-25</text><text x="960" y="680" text-anchor="middle" class="chart-label">04-26</text>
+      <path d="M 40,660 C 78.33333333333334,660 116.66666666666666,660 155,660 C 193.33333333333334,660 231.66666666666666,660 270,660 C 308.3333333333333,660 346.6666666666667,660 385,660 C 423.3333333333333,660 461.6666666666667,500.3173875779995 500,500.3173875779995 C 538.3333333333334,500.3173875779995 576.6666666666666,588.0044114075403 615,588.0044114075403 C 653.3333333333334,588.0044114075403 691.6666666666666,660 730,660 C 768.3333333333334,660 806.6666666666666,660 845,660 C 883.3333333333334,660 921.6666666666666,660 960,660 L 960,660 L 40,660 Z" fill="#6E56CF" fill-opacity="0.05"/>
+      <path d="M 40,660 C 78.33333333333334,660 116.66666666666666,660 155,660 C 193.33333333333334,660 231.66666666666666,660 270,660 C 308.3333333333333,660 346.6666666666667,660 385,660 C 423.3333333333333,660 461.6666666666667,500.3173875779995 500,500.3173875779995 C 538.3333333333334,500.3173875779995 576.6666666666666,588.0044114075403 615,588.0044114075403 C 653.3333333333334,588.0044114075403 691.6666666666666,660 730,660 C 768.3333333333334,660 806.6666666666666,660 845,660 C 883.3333333333334,660 921.6666666666666,660 960,660" stroke="#6E56CF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+      <path d="M 40,642.1105406718231 C 78.33333333333334,642.1105406718231 116.66666666666666,654.2915045958973 155,654.2915045958973 C 193.33333333333334,654.2915045958973 231.66666666666666,657.6865280424466 270,657.6865280424466 C 308.3333333333333,657.6865280424466 346.6666666666667,651.0566374285394 385,651.0566374285394 C 423.3333333333333,651.0566374285394 461.6666666666667,653.0179141912341 500,653.0179141912341 C 538.3333333333334,653.0179141912341 576.6666666666666,660 615,660 C 653.3333333333334,660 691.6666666666666,600.5749243358368 730,600.5749243358368 C 768.3333333333334,600.5749243358368 806.6666666666666,537.9439926390912 845,537.9439926390912 C 883.3333333333334,537.9439926390912 921.6666666666666,599.944794118746 960,599.944794118746 L 960,660 L 40,660 Z" fill="#10A37F" fill-opacity="0.05"/>
+      <path d="M 40,642.1105406718231 C 78.33333333333334,642.1105406718231 116.66666666666666,654.2915045958973 155,654.2915045958973 C 193.33333333333334,654.2915045958973 231.66666666666666,657.6865280424466 270,657.6865280424466 C 308.3333333333333,657.6865280424466 346.6666666666667,651.0566374285394 385,651.0566374285394 C 423.3333333333333,651.0566374285394 461.6666666666667,653.0179141912341 500,653.0179141912341 C 538.3333333333334,653.0179141912341 576.6666666666666,660 615,660 C 653.3333333333334,660 691.6666666666666,600.5749243358368 730,600.5749243358368 C 768.3333333333334,600.5749243358368 806.6666666666666,537.9439926390912 845,537.9439926390912 C 883.3333333333334,537.9439926390912 921.6666666666666,599.944794118746 960,599.944794118746" stroke="#10A37F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
 </svg>

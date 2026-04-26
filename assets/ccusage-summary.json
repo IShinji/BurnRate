@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-26T21:22:33.264Z",
+  "generatedAt": "2026-04-26T21:25:40.179Z",
   "dateRange": {
-    "start": "2026-04-21",
-    "end": "2026-04-22"
+    "start": "2026-04-11",
+    "end": "2026-04-26"
   },
   "totals": {
-    "costUSD": 248.02,
+    "costUSD": 551.38,
     "credits": 0,
-    "tokens": 267596431
+    "tokens": 710096831
   },
   "tools": [
     {
@@ -20,18 +20,37 @@
       "dates": 2,
       "files": [
         "data/claude-code.json"
+      ],
+      "models": [
+        {
+          "name": "claude-opus-4-7",
+          "costUSD": 248.02,
+          "tokens": 267596431
+        }
       ]
     },
     {
       "id": "codex",
       "name": "Codex",
       "color": "#10A37F",
-      "costUSD": 0,
+      "costUSD": 303.36,
       "credits": 0,
-      "tokens": 0,
-      "dates": 0,
+      "tokens": 442500400,
+      "dates": 8,
       "files": [
         "data/codex.json"
+      ],
+      "models": [
+        {
+          "name": "gpt-5.5",
+          "costUSD": 258.57,
+          "tokens": 346237173
+        },
+        {
+          "name": "gpt-5.4",
+          "costUSD": 44.79,
+          "tokens": 96263227
+        }
       ]
     },
     {
@@ -44,7 +63,8 @@
       "dates": 0,
       "files": [
         "data/opencode.json"
-      ]
+      ],
+      "models": []
     },
     {
       "id": "pi",
@@ -56,7 +76,8 @@
       "dates": 0,
       "files": [
         "data/pi.json"
-      ]
+      ],
+      "models": []
     },
     {
       "id": "amp",
@@ -68,21 +89,120 @@
       "dates": 0,
       "files": [
         "data/amp.json"
-      ]
+      ],
+      "models": []
     }
   ],
   "daily": [
     {
-      "date": "2026-04-21",
-      "costUSD": 170.94,
+      "date": "2026-04-11",
+      "costUSD": 19.15,
       "credits": 0,
-      "tokens": 164172282,
+      "tokens": 39315128,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 19.151024,
+          "credits": 0,
+          "tokens": 39315128,
+          "models": {
+            "gpt-5.4": {
+              "costUSD": 19.151024,
+              "tokens": 39315128
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-12",
+      "costUSD": 6.11,
+      "credits": 0,
+      "tokens": 12530450,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 6.1110584999999995,
+          "credits": 0,
+          "tokens": 12530450,
+          "models": {
+            "gpt-5.4": {
+              "costUSD": 6.1110584999999995,
+              "tokens": 12530450
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "costUSD": 2.48,
+      "credits": 0,
+      "tokens": 4240850,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 2.476618,
+          "credits": 0,
+          "tokens": 4240850,
+          "models": {
+            "gpt-5.4": {
+              "costUSD": 2.476618,
+              "tokens": 4240850
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "costUSD": 9.57,
+      "credits": 0,
+      "tokens": 23587247,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 9.5740485,
+          "credits": 0,
+          "tokens": 23587247,
+          "models": {
+            "gpt-5.4": {
+              "costUSD": 9.5740485,
+              "tokens": 23587247
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-21",
+      "costUSD": 178.42,
+      "credits": 0,
+      "tokens": 180761834,
       "tools": {
         "claude-code": {
           "name": "Claude Code",
           "costUSD": 170.94343024999995,
           "credits": 0,
-          "tokens": 164172282
+          "tokens": 164172282,
+          "models": {
+            "claude-opus-4-7": {
+              "costUSD": 170.94343024999995,
+              "tokens": 164172282
+            }
+          }
+        },
+        "codex": {
+          "name": "Codex",
+          "costUSD": 7.4744625000000005,
+          "credits": 0,
+          "tokens": 16589552,
+          "models": {
+            "gpt-5.4": {
+              "costUSD": 7.4744625000000005,
+              "tokens": 16589552
+            }
+          }
         }
       }
     },
@@ -96,7 +216,73 @@
           "name": "Claude Code",
           "costUSD": 77.07271749999998,
           "credits": 0,
-          "tokens": 103424149
+          "tokens": 103424149,
+          "models": {
+            "claude-opus-4-7": {
+              "costUSD": 77.07271749999998,
+              "tokens": 103424149
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-24",
+      "costUSD": 63.62,
+      "credits": 0,
+      "tokens": 88761749,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 63.615731999999994,
+          "credits": 0,
+          "tokens": 88761749,
+          "models": {
+            "gpt-5.5": {
+              "costUSD": 63.615731999999994,
+              "tokens": 88761749
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-25",
+      "costUSD": 130.66,
+      "credits": 0,
+      "tokens": 170831460,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 130.663397,
+          "credits": 0,
+          "tokens": 170831460,
+          "models": {
+            "gpt-5.5": {
+              "costUSD": 130.663397,
+              "tokens": 170831460
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2026-04-26",
+      "costUSD": 64.29,
+      "credits": 0,
+      "tokens": 86643964,
+      "tools": {
+        "codex": {
+          "name": "Codex",
+          "costUSD": 64.290299,
+          "credits": 0,
+          "tokens": 86643964,
+          "models": {
+            "gpt-5.5": {
+              "costUSD": 64.290299,
+              "tokens": 86643964
+            }
+          }
         }
       }
     }
