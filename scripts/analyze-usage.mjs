@@ -53,7 +53,7 @@ async function main() {
     allDays.forEach(d => {
       const existing = dailyMap.get(d.date) || { tokens: 0, cost: 0, tools: new Set() };
       existing.tokens += (d.totalTokens || 0);
-      existing.cost += (d.totalCost || 0);
+      existing.cost += (d.totalCost || d.costUSD || d.cost || 0);
       existing.tools.add(d.tool);
       dailyMap.set(d.date, existing);
     });

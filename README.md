@@ -53,6 +53,15 @@ bun run sync
    ```
    这会根据导出的数据生成 `assets/ccusage-card.svg` 文件。
 
+### 🔍 Analyzing Usage / 消耗分析
+
+View a detailed report of your highest usage days and sessions:
+查看你的消耗大户报告（单日或单次对话）：
+
+```bash
+bun run analyze
+```
+
 3. **详细配置**:
    请参考 [使用指南 (GUIDE.md)](./GUIDE.md) 查看环境变量和进阶用法。
 
