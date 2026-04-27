@@ -1,7 +1,10 @@
 {
-  "daily": [
+  "sessions": [
     {
-      "date": "Apr 11, 2026",
+      "sessionId": "2026/04/11/rollout-2026-04-11T17-14-04-019d7f09-d82c-75e0-813c-3225e9472586",
+      "lastActivity": "2026-04-12T04:17:23.064Z",
+      "sessionFile": "rollout-2026-04-11T17-14-04-019d7f09-d82c-75e0-813c-3225e9472586",
+      "directory": "2026/04/11",
       "inputTokens": 38959472,
       "cachedInputTokens": 37147776,
       "outputTokens": 355656,
@@ -20,7 +23,10 @@
       }
     },
     {
-      "date": "Apr 12, 2026",
+      "sessionId": "2026/04/12/rollout-2026-04-12T01-03-09-019d80b7-4bee-7bf3-b073-52654c615d77",
+      "lastActivity": "2026-04-12T08:41:16.717Z",
+      "sessionFile": "rollout-2026-04-12T01-03-09-019d80b7-4bee-7bf3-b073-52654c615d77",
+      "directory": "2026/04/12",
       "inputTokens": 12425487,
       "cachedInputTokens": 11789824,
       "outputTokens": 104963,
@@ -39,145 +45,1134 @@
       }
     },
     {
-      "date": "Apr 16, 2026",
-      "inputTokens": 4184392,
-      "cachedInputTokens": 3924992,
-      "outputTokens": 56458,
-      "reasoningOutputTokens": 27143,
-      "totalTokens": 4240850,
-      "costUSD": 2.476618,
+      "sessionId": "2026/04/16/rollout-2026-04-16T15-05-16-019d9853-b5c8-7f51-95c7-2f5f47ae5db4",
+      "lastActivity": "2026-04-16T22:07:52.819Z",
+      "sessionFile": "rollout-2026-04-16T15-05-16-019d9853-b5c8-7f51-95c7-2f5f47ae5db4",
+      "directory": "2026/04/16",
+      "inputTokens": 145190,
+      "cachedInputTokens": 128256,
+      "outputTokens": 6742,
+      "reasoningOutputTokens": 4145,
+      "totalTokens": 151932,
+      "costUSD": 0.175529,
       "models": {
         "gpt-5.4": {
-          "inputTokens": 4184392,
-          "cachedInputTokens": 3924992,
-          "outputTokens": 56458,
-          "reasoningOutputTokens": 27143,
-          "totalTokens": 4240850,
+          "inputTokens": 145190,
+          "cachedInputTokens": 128256,
+          "outputTokens": 6742,
+          "reasoningOutputTokens": 4145,
+          "totalTokens": 151932,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 20, 2026",
-      "inputTokens": 23396457,
-      "cachedInputTokens": 23012864,
-      "outputTokens": 190790,
-      "reasoningOutputTokens": 69115,
-      "totalTokens": 23587247,
-      "costUSD": 9.5740485,
+      "sessionId": "2026/04/16/rollout-2026-04-16T15-56-32-019d9882-a55f-7fe2-b2dc-a6419767b33a",
+      "lastActivity": "2026-04-16T23:17:26.658Z",
+      "sessionFile": "rollout-2026-04-16T15-56-32-019d9882-a55f-7fe2-b2dc-a6419767b33a",
+      "directory": "2026/04/16",
+      "inputTokens": 4039202,
+      "cachedInputTokens": 3796736,
+      "outputTokens": 49716,
+      "reasoningOutputTokens": 22998,
+      "totalTokens": 4088918,
+      "costUSD": 2.301089,
       "models": {
         "gpt-5.4": {
-          "inputTokens": 23396457,
-          "cachedInputTokens": 23012864,
-          "outputTokens": 190790,
-          "reasoningOutputTokens": 69115,
-          "totalTokens": 23587247,
+          "inputTokens": 4039202,
+          "cachedInputTokens": 3796736,
+          "outputTokens": 49716,
+          "reasoningOutputTokens": 22998,
+          "totalTokens": 4088918,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 21, 2026",
-      "inputTokens": 16479963,
-      "cachedInputTokens": 15719680,
-      "outputTokens": 109589,
-      "reasoningOutputTokens": 48677,
-      "totalTokens": 16589552,
-      "costUSD": 7.4744625000000005,
+      "sessionId": "2026/04/20/rollout-2026-04-20T22-29-16-019dae83-a4bf-77e1-a70b-38248d29a383",
+      "lastActivity": "2026-04-21T08:31:04.570Z",
+      "sessionFile": "rollout-2026-04-20T22-29-16-019dae83-a4bf-77e1-a70b-38248d29a383",
+      "directory": "2026/04/20",
+      "inputTokens": 39876420,
+      "cachedInputTokens": 38732544,
+      "outputTokens": 300379,
+      "reasoningOutputTokens": 117792,
+      "totalTokens": 40176799,
+      "costUSD": 17.048510999999998,
       "models": {
         "gpt-5.4": {
-          "inputTokens": 16479963,
-          "cachedInputTokens": 15719680,
-          "outputTokens": 109589,
-          "reasoningOutputTokens": 48677,
-          "totalTokens": 16589552,
+          "inputTokens": 39876420,
+          "cachedInputTokens": 38732544,
+          "outputTokens": 300379,
+          "reasoningOutputTokens": 117792,
+          "totalTokens": 40176799,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 24, 2026",
-      "inputTokens": 88508178,
-      "cachedInputTokens": 85896064,
-      "outputTokens": 253571,
-      "reasoningOutputTokens": 94821,
-      "totalTokens": 88761749,
-      "costUSD": 63.615731999999994,
+      "sessionId": "2026/04/24/rollout-2026-04-24T15-00-49-019dc182-8262-73a1-9939-56f453aa7381",
+      "lastActivity": "2026-04-24T22:51:50.365Z",
+      "sessionFile": "rollout-2026-04-24T15-00-49-019dc182-8262-73a1-9939-56f453aa7381",
+      "directory": "2026/04/24",
+      "inputTokens": 14924139,
+      "cachedInputTokens": 14579584,
+      "outputTokens": 56623,
+      "reasoningOutputTokens": 28612,
+      "totalTokens": 14980762,
+      "costUSD": 10.711257,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 88508178,
-          "cachedInputTokens": 85896064,
-          "outputTokens": 253571,
-          "reasoningOutputTokens": 94821,
-          "totalTokens": 88761749,
+          "inputTokens": 14924139,
+          "cachedInputTokens": 14579584,
+          "outputTokens": 56623,
+          "reasoningOutputTokens": 28612,
+          "totalTokens": 14980762,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 25, 2026",
-      "inputTokens": 170174539,
-      "cachedInputTokens": 164425984,
-      "outputTokens": 656921,
-      "reasoningOutputTokens": 259851,
-      "totalTokens": 170831460,
-      "costUSD": 130.663397,
+      "sessionId": "2026/04/24/rollout-2026-04-24T15-54-20-019dc1b3-8305-72f1-9413-3c7cda63f5ec",
+      "lastActivity": "2026-04-25T07:02:57.880Z",
+      "sessionFile": "rollout-2026-04-24T15-54-20-019dc1b3-8305-72f1-9413-3c7cda63f5ec",
+      "directory": "2026/04/24",
+      "inputTokens": 74203058,
+      "cachedInputTokens": 71894016,
+      "outputTokens": 198771,
+      "reasoningOutputTokens": 67035,
+      "totalTokens": 74401829,
+      "costUSD": 53.455347999999994,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 170174539,
-          "cachedInputTokens": 164425984,
-          "outputTokens": 656921,
-          "reasoningOutputTokens": 259851,
-          "totalTokens": 170831460,
+          "inputTokens": 74203058,
+          "cachedInputTokens": 71894016,
+          "outputTokens": 198771,
+          "reasoningOutputTokens": 67035,
+          "totalTokens": 74401829,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 26, 2026",
-      "inputTokens": 169939604,
-      "cachedInputTokens": 165199616,
-      "outputTokens": 612716,
-      "reasoningOutputTokens": 195529,
-      "totalTokens": 170552320,
-      "costUSD": 124.68122799999999,
+      "sessionId": "2026/04/25/rollout-2026-04-25T00-06-52-019dc376-7186-70c2-a640-cd2ad712c572",
+      "lastActivity": "2026-04-25T07:37:30.071Z",
+      "sessionFile": "rollout-2026-04-25T00-06-52-019dc376-7186-70c2-a640-cd2ad712c572",
+      "directory": "2026/04/25",
+      "inputTokens": 14042689,
+      "cachedInputTokens": 13585280,
+      "outputTokens": 46403,
+      "reasoningOutputTokens": 13634,
+      "totalTokens": 14089092,
+      "costUSD": 10.471775,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 169939604,
-          "cachedInputTokens": 165199616,
-          "outputTokens": 612716,
-          "reasoningOutputTokens": 195529,
-          "totalTokens": 170552320,
+          "inputTokens": 14042689,
+          "cachedInputTokens": 13585280,
+          "outputTokens": 46403,
+          "reasoningOutputTokens": 13634,
+          "totalTokens": 14089092,
           "isFallback": false
         }
       }
     },
     {
-      "date": "Apr 27, 2026",
-      "inputTokens": 63682989,
-      "cachedInputTokens": 62414080,
-      "outputTokens": 155827,
-      "reasoningOutputTokens": 37160,
-      "totalTokens": 63838816,
-      "costUSD": 42.226395000000004,
+      "sessionId": "2026/04/25/rollout-2026-04-25T00-37-55-019dc392-deb6-7e80-adf8-c11b74656d95",
+      "lastActivity": "2026-04-25T07:54:17.230Z",
+      "sessionFile": "rollout-2026-04-25T00-37-55-019dc392-deb6-7e80-adf8-c11b74656d95",
+      "directory": "2026/04/25",
+      "inputTokens": 14216664,
+      "cachedInputTokens": 13436416,
+      "outputTokens": 42434,
+      "reasoningOutputTokens": 17664,
+      "totalTokens": 14259098,
+      "costUSD": 11.892468000000001,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 63682989,
-          "cachedInputTokens": 62414080,
-          "outputTokens": 155827,
-          "reasoningOutputTokens": 37160,
-          "totalTokens": 63838816,
+          "inputTokens": 14216664,
+          "cachedInputTokens": 13436416,
+          "outputTokens": 42434,
+          "reasoningOutputTokens": 17664,
+          "totalTokens": 14259098,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T12-14-15-019dc610-60bc-7dc1-8a54-79960de89406",
+      "lastActivity": "2026-04-25T19:42:52.926Z",
+      "sessionFile": "rollout-2026-04-25T12-14-15-019dc610-60bc-7dc1-8a54-79960de89406",
+      "directory": "2026/04/25",
+      "inputTokens": 1112775,
+      "cachedInputTokens": 974080,
+      "outputTokens": 9617,
+      "reasoningOutputTokens": 4144,
+      "totalTokens": 1122392,
+      "costUSD": 1.469025,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1112775,
+          "cachedInputTokens": 974080,
+          "outputTokens": 9617,
+          "reasoningOutputTokens": 4144,
+          "totalTokens": 1122392,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T12-50-01-019dc631-1f58-7992-8d90-fa28d253bcbe",
+      "lastActivity": "2026-04-25T20:02:28.678Z",
+      "sessionFile": "rollout-2026-04-25T12-50-01-019dc631-1f58-7992-8d90-fa28d253bcbe",
+      "directory": "2026/04/25",
+      "inputTokens": 1024646,
+      "cachedInputTokens": 924160,
+      "outputTokens": 12053,
+      "reasoningOutputTokens": 6681,
+      "totalTokens": 1036699,
+      "costUSD": 1.3260999999999998,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1024646,
+          "cachedInputTokens": 924160,
+          "outputTokens": 12053,
+          "reasoningOutputTokens": 6681,
+          "totalTokens": 1036699,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T13-21-08-019dc64d-9c5b-76e2-9e1f-370309a4b218",
+      "lastActivity": "2026-04-25T20:33:36.783Z",
+      "sessionFile": "rollout-2026-04-25T13-21-08-019dc64d-9c5b-76e2-9e1f-370309a4b218",
+      "directory": "2026/04/25",
+      "inputTokens": 800499,
+      "cachedInputTokens": 746624,
+      "outputTokens": 5154,
+      "reasoningOutputTokens": 1888,
+      "totalTokens": 805653,
+      "costUSD": 0.797307,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 800499,
+          "cachedInputTokens": 746624,
+          "outputTokens": 5154,
+          "reasoningOutputTokens": 1888,
+          "totalTokens": 805653,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T13-36-20-019dc65b-87d8-7e00-bf48-3b4eed2cc312",
+      "lastActivity": "2026-04-25T20:39:04.891Z",
+      "sessionFile": "rollout-2026-04-25T13-36-20-019dc65b-87d8-7e00-bf48-3b4eed2cc312",
+      "directory": "2026/04/25",
+      "inputTokens": 1417490,
+      "cachedInputTokens": 1357568,
+      "outputTokens": 9905,
+      "reasoningOutputTokens": 4558,
+      "totalTokens": 1427395,
+      "costUSD": 1.275544,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1417490,
+          "cachedInputTokens": 1357568,
+          "outputTokens": 9905,
+          "reasoningOutputTokens": 4558,
+          "totalTokens": 1427395,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T13-44-45-019dc663-3c32-7ae0-b8e1-b434188140e7",
+      "lastActivity": "2026-04-25T20:46:34.712Z",
+      "sessionFile": "rollout-2026-04-25T13-44-45-019dc663-3c32-7ae0-b8e1-b434188140e7",
+      "directory": "2026/04/25",
+      "inputTokens": 1092564,
+      "cachedInputTokens": 1053568,
+      "outputTokens": 6890,
+      "reasoningOutputTokens": 2968,
+      "totalTokens": 1099454,
+      "costUSD": 0.9284640000000001,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1092564,
+          "cachedInputTokens": 1053568,
+          "outputTokens": 6890,
+          "reasoningOutputTokens": 2968,
+          "totalTokens": 1099454,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T13-47-11-019dc665-74c7-7102-977a-1e20308d026e",
+      "lastActivity": "2026-04-25T21:03:00.469Z",
+      "sessionFile": "rollout-2026-04-25T13-47-11-019dc665-74c7-7102-977a-1e20308d026e",
+      "directory": "2026/04/25",
+      "inputTokens": 20172906,
+      "cachedInputTokens": 19783680,
+      "outputTokens": 56104,
+      "reasoningOutputTokens": 25603,
+      "totalTokens": 20229010,
+      "costUSD": 13.521090000000001,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 20172906,
+          "cachedInputTokens": 19783680,
+          "outputTokens": 56104,
+          "reasoningOutputTokens": 25603,
+          "totalTokens": 20229010,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T14-04-13-019dc675-1008-7601-b5eb-d86bb75b4d28",
+      "lastActivity": "2026-04-25T21:04:49.869Z",
+      "sessionFile": "rollout-2026-04-25T14-04-13-019dc675-1008-7601-b5eb-d86bb75b4d28",
+      "directory": "2026/04/25",
+      "inputTokens": 70663,
+      "cachedInputTokens": 55936,
+      "outputTokens": 1811,
+      "reasoningOutputTokens": 660,
+      "totalTokens": 72474,
+      "costUSD": 0.155933,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 70663,
+          "cachedInputTokens": 55936,
+          "outputTokens": 1811,
+          "reasoningOutputTokens": 660,
+          "totalTokens": 72474,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T14-08-16-019dc678-c4a3-7cf2-8097-29b91bd40bdd",
+      "lastActivity": "2026-04-25T21:10:08.353Z",
+      "sessionFile": "rollout-2026-04-25T14-08-16-019dc678-c4a3-7cf2-8097-29b91bd40bdd",
+      "directory": "2026/04/25",
+      "inputTokens": 569182,
+      "cachedInputTokens": 513280,
+      "outputTokens": 6635,
+      "reasoningOutputTokens": 3637,
+      "totalTokens": 575817,
+      "costUSD": 0.7351999999999999,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 569182,
+          "cachedInputTokens": 513280,
+          "outputTokens": 6635,
+          "reasoningOutputTokens": 3637,
+          "totalTokens": 575817,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T14-31-15-019dc68d-cda9-78d1-8abb-f750930016f8",
+      "lastActivity": "2026-04-25T21:43:27.675Z",
+      "sessionFile": "rollout-2026-04-25T14-31-15-019dc68d-cda9-78d1-8abb-f750930016f8",
+      "directory": "2026/04/25",
+      "inputTokens": 2466030,
+      "cachedInputTokens": 2323200,
+      "outputTokens": 18997,
+      "reasoningOutputTokens": 9772,
+      "totalTokens": 2485027,
+      "costUSD": 2.44566,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 2466030,
+          "cachedInputTokens": 2323200,
+          "outputTokens": 18997,
+          "reasoningOutputTokens": 9772,
+          "totalTokens": 2485027,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T14-43-43-019dc699-382b-7870-b85e-76d77b5da115",
+      "lastActivity": "2026-04-25T21:54:53.253Z",
+      "sessionFile": "rollout-2026-04-25T14-43-43-019dc699-382b-7870-b85e-76d77b5da115",
+      "directory": "2026/04/25",
+      "inputTokens": 5996426,
+      "cachedInputTokens": 5733888,
+      "outputTokens": 29587,
+      "reasoningOutputTokens": 14286,
+      "totalTokens": 6026013,
+      "costUSD": 5.0672440000000005,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 5996426,
+          "cachedInputTokens": 5733888,
+          "outputTokens": 29587,
+          "reasoningOutputTokens": 14286,
+          "totalTokens": 6026013,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T14-58-39-019dc6a6-e487-7860-8d6d-a2d193d03610",
+      "lastActivity": "2026-04-25T22:11:54.138Z",
+      "sessionFile": "rollout-2026-04-25T14-58-39-019dc6a6-e487-7860-8d6d-a2d193d03610",
+      "directory": "2026/04/25",
+      "inputTokens": 5356419,
+      "cachedInputTokens": 5128576,
+      "outputTokens": 25843,
+      "reasoningOutputTokens": 12465,
+      "totalTokens": 5382262,
+      "costUSD": 4.478793,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 5356419,
+          "cachedInputTokens": 5128576,
+          "outputTokens": 25843,
+          "reasoningOutputTokens": 12465,
+          "totalTokens": 5382262,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-12-58-019dc6b4-00d7-7741-9944-7fe47e32174d",
+      "lastActivity": "2026-04-25T22:17:13.285Z",
+      "sessionFile": "rollout-2026-04-25T15-12-58-019dc6b4-00d7-7741-9944-7fe47e32174d",
+      "directory": "2026/04/25",
+      "inputTokens": 1985615,
+      "cachedInputTokens": 1913472,
+      "outputTokens": 11907,
+      "reasoningOutputTokens": 4920,
+      "totalTokens": 1997522,
+      "costUSD": 1.6746610000000002,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1985615,
+          "cachedInputTokens": 1913472,
+          "outputTokens": 11907,
+          "reasoningOutputTokens": 4920,
+          "totalTokens": 1997522,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-26-32-019dc6c0-6c75-7a60-916c-09c5064f1d4d",
+      "lastActivity": "2026-04-25T22:33:36.806Z",
+      "sessionFile": "rollout-2026-04-25T15-26-32-019dc6c0-6c75-7a60-916c-09c5064f1d4d",
+      "directory": "2026/04/25",
+      "inputTokens": 3257374,
+      "cachedInputTokens": 3083648,
+      "outputTokens": 16709,
+      "reasoningOutputTokens": 6891,
+      "totalTokens": 3274083,
+      "costUSD": 2.9117240000000004,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 3257374,
+          "cachedInputTokens": 3083648,
+          "outputTokens": 16709,
+          "reasoningOutputTokens": 6891,
+          "totalTokens": 3274083,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-34-53-019dc6c8-1297-7332-bf85-4791a8946391",
+      "lastActivity": "2026-04-25T22:38:00.997Z",
+      "sessionFile": "rollout-2026-04-25T15-34-53-019dc6c8-1297-7332-bf85-4791a8946391",
+      "directory": "2026/04/25",
+      "inputTokens": 1154763,
+      "cachedInputTokens": 1095680,
+      "outputTokens": 7293,
+      "reasoningOutputTokens": 3527,
+      "totalTokens": 1162056,
+      "costUSD": 1.062045,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1154763,
+          "cachedInputTokens": 1095680,
+          "outputTokens": 7293,
+          "reasoningOutputTokens": 3527,
+          "totalTokens": 1162056,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-39-02-019dc6cb-dc24-7992-af16-be2253d5e5b9",
+      "lastActivity": "2026-04-25T22:46:35.127Z",
+      "sessionFile": "rollout-2026-04-25T15-39-02-019dc6cb-dc24-7992-af16-be2253d5e5b9",
+      "directory": "2026/04/25",
+      "inputTokens": 2567205,
+      "cachedInputTokens": 2468992,
+      "outputTokens": 16976,
+      "reasoningOutputTokens": 7511,
+      "totalTokens": 2584181,
+      "costUSD": 2.234841,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 2567205,
+          "cachedInputTokens": 2468992,
+          "outputTokens": 16976,
+          "reasoningOutputTokens": 7511,
+          "totalTokens": 2584181,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-48-04-019dc6d4-21bf-75f0-8994-e43dd8b959d3",
+      "lastActivity": "2026-04-25T22:52:25.998Z",
+      "sessionFile": "rollout-2026-04-25T15-48-04-019dc6d4-21bf-75f0-8994-e43dd8b959d3",
+      "directory": "2026/04/25",
+      "inputTokens": 1954724,
+      "cachedInputTokens": 1865984,
+      "outputTokens": 12189,
+      "reasoningOutputTokens": 4546,
+      "totalTokens": 1966913,
+      "costUSD": 1.742362,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1954724,
+          "cachedInputTokens": 1865984,
+          "outputTokens": 12189,
+          "reasoningOutputTokens": 4546,
+          "totalTokens": 1966913,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T15-53-33-019dc6d9-28cf-7323-9b2b-81660f6ae598",
+      "lastActivity": "2026-04-25T23:04:34.250Z",
+      "sessionFile": "rollout-2026-04-25T15-53-33-019dc6d9-28cf-7323-9b2b-81660f6ae598",
+      "directory": "2026/04/25",
+      "inputTokens": 2413268,
+      "cachedInputTokens": 2269824,
+      "outputTokens": 14798,
+      "reasoningOutputTokens": 7672,
+      "totalTokens": 2428066,
+      "costUSD": 2.2960719999999997,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 2413268,
+          "cachedInputTokens": 2269824,
+          "outputTokens": 14798,
+          "reasoningOutputTokens": 7672,
+          "totalTokens": 2428066,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T16-10-37-019dc6e8-c83e-7fa0-bc16-ce64253d704e",
+      "lastActivity": "2026-04-25T23:16:50.700Z",
+      "sessionFile": "rollout-2026-04-25T16-10-37-019dc6e8-c83e-7fa0-bc16-ce64253d704e",
+      "directory": "2026/04/25",
+      "inputTokens": 4806216,
+      "cachedInputTokens": 4686848,
+      "outputTokens": 22413,
+      "reasoningOutputTokens": 8222,
+      "totalTokens": 4828629,
+      "costUSD": 3.612654,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 4806216,
+          "cachedInputTokens": 4686848,
+          "outputTokens": 22413,
+          "reasoningOutputTokens": 8222,
+          "totalTokens": 4828629,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T17-42-52-019dc73d-3eaf-7562-96a1-3a52be4ce38a",
+      "lastActivity": "2026-04-26T00:50:10.276Z",
+      "sessionFile": "rollout-2026-04-25T17-42-52-019dc73d-3eaf-7562-96a1-3a52be4ce38a",
+      "directory": "2026/04/25",
+      "inputTokens": 4403788,
+      "cachedInputTokens": 4246400,
+      "outputTokens": 18075,
+      "reasoningOutputTokens": 8897,
+      "totalTokens": 4421863,
+      "costUSD": 3.4523900000000003,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 4403788,
+          "cachedInputTokens": 4246400,
+          "outputTokens": 18075,
+          "reasoningOutputTokens": 8897,
+          "totalTokens": 4421863,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T17-50-14-019dc743-fc99-7813-a368-0e5de2f65d83",
+      "lastActivity": "2026-04-26T01:16:01.813Z",
+      "sessionFile": "rollout-2026-04-25T17-50-14-019dc743-fc99-7813-a368-0e5de2f65d83",
+      "directory": "2026/04/25",
+      "inputTokens": 5925787,
+      "cachedInputTokens": 5785344,
+      "outputTokens": 19235,
+      "reasoningOutputTokens": 7969,
+      "totalTokens": 5945022,
+      "costUSD": 4.171937,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 5925787,
+          "cachedInputTokens": 5785344,
+          "outputTokens": 19235,
+          "reasoningOutputTokens": 7969,
+          "totalTokens": 5945022,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T19-10-05-019dc78d-14f4-7c81-ad23-dc77cc588a5f",
+      "lastActivity": "2026-04-26T02:48:18.543Z",
+      "sessionFile": "rollout-2026-04-25T19-10-05-019dc78d-14f4-7c81-ad23-dc77cc588a5f",
+      "directory": "2026/04/25",
+      "inputTokens": 21838131,
+      "cachedInputTokens": 21489920,
+      "outputTokens": 61731,
+      "reasoningOutputTokens": 20625,
+      "totalTokens": 21899862,
+      "costUSD": 14.337945,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 21838131,
+          "cachedInputTokens": 21489920,
+          "outputTokens": 61731,
+          "reasoningOutputTokens": 20625,
+          "totalTokens": 21899862,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T20-15-18-019dc7c8-cc28-7ac3-b1f1-7e5673ac2878",
+      "lastActivity": "2026-04-26T03:50:49.458Z",
+      "sessionFile": "rollout-2026-04-25T20-15-18-019dc7c8-cc28-7ac3-b1f1-7e5673ac2878",
+      "directory": "2026/04/25",
+      "inputTokens": 12065887,
+      "cachedInputTokens": 11598208,
+      "outputTokens": 40083,
+      "reasoningOutputTokens": 16898,
+      "totalTokens": 12105970,
+      "costUSD": 9.339989,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 12065887,
+          "cachedInputTokens": 11598208,
+          "outputTokens": 40083,
+          "reasoningOutputTokens": 16898,
+          "totalTokens": 12105970,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T20-53-41-019dc7eb-efe5-7392-abba-06950229701b",
+      "lastActivity": "2026-04-26T04:03:41.599Z",
+      "sessionFile": "rollout-2026-04-25T20-53-41-019dc7eb-efe5-7392-abba-06950229701b",
+      "directory": "2026/04/25",
+      "inputTokens": 6681019,
+      "cachedInputTokens": 6482688,
+      "outputTokens": 26299,
+      "reasoningOutputTokens": 9796,
+      "totalTokens": 6707318,
+      "costUSD": 5.0219689999999995,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 6681019,
+          "cachedInputTokens": 6482688,
+          "outputTokens": 26299,
+          "reasoningOutputTokens": 9796,
+          "totalTokens": 6707318,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T21-07-31-019dc7f8-99df-7bd0-ad07-4e071579cd7b",
+      "lastActivity": "2026-04-26T05:18:56.308Z",
+      "sessionFile": "rollout-2026-04-25T21-07-31-019dc7f8-99df-7bd0-ad07-4e071579cd7b",
+      "directory": "2026/04/25",
+      "inputTokens": 23926301,
+      "cachedInputTokens": 23358720,
+      "outputTokens": 59730,
+      "reasoningOutputTokens": 23441,
+      "totalTokens": 23986031,
+      "costUSD": 16.309165,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 23926301,
+          "cachedInputTokens": 23358720,
+          "outputTokens": 59730,
+          "reasoningOutputTokens": 23441,
+          "totalTokens": 23986031,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/25/rollout-2026-04-25T23-22-06-019dc873-cef3-7c91-bcaf-88394d64731b",
+      "lastActivity": "2026-04-26T06:44:45.619Z",
+      "sessionFile": "rollout-2026-04-25T23-22-06-019dc873-cef3-7c91-bcaf-88394d64731b",
+      "directory": "2026/04/25",
+      "inputTokens": 8236489,
+      "cachedInputTokens": 7886464,
+      "outputTokens": 56227,
+      "reasoningOutputTokens": 10150,
+      "totalTokens": 8292716,
+      "costUSD": 7.380167,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 8236489,
+          "cachedInputTokens": 7886464,
+          "outputTokens": 56227,
+          "reasoningOutputTokens": 10150,
+          "totalTokens": 8292716,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T00-47-55-019dc8c2-630a-7741-a21c-8bd859139d5e",
+      "lastActivity": "2026-04-26T08:02:46.669Z",
+      "sessionFile": "rollout-2026-04-26T00-47-55-019dc8c2-630a-7741-a21c-8bd859139d5e",
+      "directory": "2026/04/26",
+      "inputTokens": 8506323,
+      "cachedInputTokens": 8212992,
+      "outputTokens": 29996,
+      "reasoningOutputTokens": 9694,
+      "totalTokens": 8536319,
+      "costUSD": 6.473031,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 8506323,
+          "cachedInputTokens": 8212992,
+          "outputTokens": 29996,
+          "reasoningOutputTokens": 9694,
+          "totalTokens": 8536319,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T01-27-52-019dc8e6-f58e-7382-8e1e-131be500f526",
+      "lastActivity": "2026-04-26T08:41:46.018Z",
+      "sessionFile": "rollout-2026-04-26T01-27-52-019dc8e6-f58e-7382-8e1e-131be500f526",
+      "directory": "2026/04/26",
+      "inputTokens": 11376355,
+      "cachedInputTokens": 11155456,
+      "outputTokens": 32378,
+      "reasoningOutputTokens": 9368,
+      "totalTokens": 11408733,
+      "costUSD": 7.653562999999999,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 11376355,
+          "cachedInputTokens": 11155456,
+          "outputTokens": 32378,
+          "reasoningOutputTokens": 9368,
+          "totalTokens": 11408733,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T02-01-51-019dc906-1352-7fa1-8bc9-d43eb4a1dbb9",
+      "lastActivity": "2026-04-26T09:05:43.589Z",
+      "sessionFile": "rollout-2026-04-26T02-01-51-019dc906-1352-7fa1-8bc9-d43eb4a1dbb9",
+      "directory": "2026/04/26",
+      "inputTokens": 1798956,
+      "cachedInputTokens": 1726336,
+      "outputTokens": 11050,
+      "reasoningOutputTokens": 4384,
+      "totalTokens": 1810006,
+      "costUSD": 1.5577680000000003,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1798956,
+          "cachedInputTokens": 1726336,
+          "outputTokens": 11050,
+          "reasoningOutputTokens": 4384,
+          "totalTokens": 1810006,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T02-05-58-019dc909-d85c-7371-baf2-011953eb34ce",
+      "lastActivity": "2026-04-26T09:16:34.265Z",
+      "sessionFile": "rollout-2026-04-26T02-05-58-019dc909-d85c-7371-baf2-011953eb34ce",
+      "directory": "2026/04/26",
+      "inputTokens": 5352810,
+      "cachedInputTokens": 5198976,
+      "outputTokens": 30065,
+      "reasoningOutputTokens": 13547,
+      "totalTokens": 5382875,
+      "costUSD": 4.270608,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 5352810,
+          "cachedInputTokens": 5198976,
+          "outputTokens": 30065,
+          "reasoningOutputTokens": 13547,
+          "totalTokens": 5382875,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T02-27-27-019dc91d-8140-7541-b429-219aafc25eba",
+      "lastActivity": "2026-04-26T09:44:06.036Z",
+      "sessionFile": "rollout-2026-04-26T02-27-27-019dc91d-8140-7541-b429-219aafc25eba",
+      "directory": "2026/04/26",
+      "inputTokens": 14252017,
+      "cachedInputTokens": 13813120,
+      "outputTokens": 36017,
+      "reasoningOutputTokens": 12694,
+      "totalTokens": 14288034,
+      "costUSD": 10.181555,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 14252017,
+          "cachedInputTokens": 13813120,
+          "outputTokens": 36017,
+          "reasoningOutputTokens": 12694,
+          "totalTokens": 14288034,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T12-59-53-019dcb60-866b-7ce2-afae-ffc103fa60b5",
+      "lastActivity": "2026-04-26T20:14:56.381Z",
+      "sessionFile": "rollout-2026-04-26T12-59-53-019dcb60-866b-7ce2-afae-ffc103fa60b5",
+      "directory": "2026/04/26",
+      "inputTokens": 10950892,
+      "cachedInputTokens": 10618496,
+      "outputTokens": 49481,
+      "reasoningOutputTokens": 12156,
+      "totalTokens": 11000373,
+      "costUSD": 8.455658,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 10950892,
+          "cachedInputTokens": 10618496,
+          "outputTokens": 49481,
+          "reasoningOutputTokens": 12156,
+          "totalTokens": 11000373,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T13-16-31-019dcb6f-c063-74d1-aa34-a91ca0b2258e",
+      "lastActivity": "2026-04-26T20:33:02.478Z",
+      "sessionFile": "rollout-2026-04-26T13-16-31-019dcb6f-c063-74d1-aa34-a91ca0b2258e",
+      "directory": "2026/04/26",
+      "inputTokens": 11299077,
+      "cachedInputTokens": 10856192,
+      "outputTokens": 56870,
+      "reasoningOutputTokens": 11285,
+      "totalTokens": 11355947,
+      "costUSD": 9.348621,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 11299077,
+          "cachedInputTokens": 10856192,
+          "outputTokens": 56870,
+          "reasoningOutputTokens": 11285,
+          "totalTokens": 11355947,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T13-39-10-019dcb84-7b42-7162-b3ac-2bc69b85f59f",
+      "lastActivity": "2026-04-26T20:57:13.951Z",
+      "sessionFile": "rollout-2026-04-26T13-39-10-019dcb84-7b42-7162-b3ac-2bc69b85f59f",
+      "directory": "2026/04/26",
+      "inputTokens": 21754491,
+      "cachedInputTokens": 21281792,
+      "outputTokens": 54346,
+      "reasoningOutputTokens": 16852,
+      "totalTokens": 21808837,
+      "costUSD": 14.634771,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 21754491,
+          "cachedInputTokens": 21281792,
+          "outputTokens": 54346,
+          "reasoningOutputTokens": 16852,
+          "totalTokens": 21808837,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T14-10-11-019dcba0-e0ef-7a51-9672-06021d061108",
+      "lastActivity": "2026-04-26T21:15:53.466Z",
+      "sessionFile": "rollout-2026-04-26T14-10-11-019dcba0-e0ef-7a51-9672-06021d061108",
+      "directory": "2026/04/26",
+      "inputTokens": 1029484,
+      "cachedInputTokens": 918528,
+      "outputTokens": 23356,
+      "reasoningOutputTokens": 11399,
+      "totalTokens": 1052840,
+      "costUSD": 1.7147240000000001,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 1029484,
+          "cachedInputTokens": 918528,
+          "outputTokens": 23356,
+          "reasoningOutputTokens": 11399,
+          "totalTokens": 1052840,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T15-35-02-019dcbee-8e94-74e2-85ad-0a6245d9e06c",
+      "lastActivity": "2026-04-26T22:47:16.864Z",
+      "sessionFile": "rollout-2026-04-26T15-35-02-019dcbee-8e94-74e2-85ad-0a6245d9e06c",
+      "directory": "2026/04/26",
+      "inputTokens": 10798515,
+      "cachedInputTokens": 10573440,
+      "outputTokens": 39780,
+      "reasoningOutputTokens": 8584,
+      "totalTokens": 10838295,
+      "costUSD": 7.6054949999999995,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 10798515,
+          "cachedInputTokens": 10573440,
+          "outputTokens": 39780,
+          "reasoningOutputTokens": 8584,
+          "totalTokens": 10838295,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T18-57-03-019dcca7-8278-7a10-a533-8d497a066bb5",
+      "lastActivity": "2026-04-27T02:21:47.144Z",
+      "sessionFile": "rollout-2026-04-26T18-57-03-019dcca7-8278-7a10-a533-8d497a066bb5",
+      "directory": "2026/04/26",
+      "inputTokens": 18479143,
+      "cachedInputTokens": 18120064,
+      "outputTokens": 72108,
+      "reasoningOutputTokens": 21051,
+      "totalTokens": 18551251,
+      "costUSD": 13.018666999999999,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 18479143,
+          "cachedInputTokens": 18120064,
+          "outputTokens": 72108,
+          "reasoningOutputTokens": 21051,
+          "totalTokens": 18551251,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T19-22-37-019dccbe-eaf8-78a1-aac4-3a8f66162bd3",
+      "lastActivity": "2026-04-27T02:34:04.027Z",
+      "sessionFile": "rollout-2026-04-26T19-22-37-019dccbe-eaf8-78a1-aac4-3a8f66162bd3",
+      "directory": "2026/04/26",
+      "inputTokens": 6426799,
+      "cachedInputTokens": 6276352,
+      "outputTokens": 34538,
+      "reasoningOutputTokens": 12888,
+      "totalTokens": 6461337,
+      "costUSD": 4.926551,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 6426799,
+          "cachedInputTokens": 6276352,
+          "outputTokens": 34538,
+          "reasoningOutputTokens": 12888,
+          "totalTokens": 6461337,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T19-36-53-019dcccb-fc7b-7983-a08c-eb037e98b03f",
+      "lastActivity": "2026-04-27T02:45:47.135Z",
+      "sessionFile": "rollout-2026-04-26T19-36-53-019dcccb-fc7b-7983-a08c-eb037e98b03f",
+      "directory": "2026/04/26",
+      "inputTokens": 4256806,
+      "cachedInputTokens": 4129920,
+      "outputTokens": 18535,
+      "reasoningOutputTokens": 8827,
+      "totalTokens": 4275341,
+      "costUSD": 3.25544,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 4256806,
+          "cachedInputTokens": 4129920,
+          "outputTokens": 18535,
+          "reasoningOutputTokens": 8827,
+          "totalTokens": 4275341,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T19-59-03-019dcce0-4509-7482-a75f-01ddd52ac59b",
+      "lastActivity": "2026-04-27T03:07:02.570Z",
+      "sessionFile": "rollout-2026-04-26T19-59-03-019dcce0-4509-7482-a75f-01ddd52ac59b",
+      "directory": "2026/04/26",
+      "inputTokens": 3091553,
+      "cachedInputTokens": 2998784,
+      "outputTokens": 13301,
+      "reasoningOutputTokens": 5387,
+      "totalTokens": 3104854,
+      "costUSD": 2.362267,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 3091553,
+          "cachedInputTokens": 2998784,
+          "outputTokens": 13301,
+          "reasoningOutputTokens": 5387,
+          "totalTokens": 3104854,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T22-59-02-019dcd85-0dd6-7590-8ac9-2fcc054375db",
+      "lastActivity": "2026-04-27T06:33:06.861Z",
+      "sessionFile": "rollout-2026-04-26T22-59-02-019dcd85-0dd6-7590-8ac9-2fcc054375db",
+      "directory": "2026/04/26",
+      "inputTokens": 31655241,
+      "cachedInputTokens": 30827776,
+      "outputTokens": 62974,
+      "reasoningOutputTokens": 19049,
+      "totalTokens": 31718215,
+      "costUSD": 21.440433000000002,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 31655241,
+          "cachedInputTokens": 30827776,
+          "outputTokens": 62974,
+          "reasoningOutputTokens": 19049,
+          "totalTokens": 31718215,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T23-33-15-019dcda4-600d-7e72-83af-96560a62fb09",
+      "lastActivity": "2026-04-27T06:38:55.613Z",
+      "sessionFile": "rollout-2026-04-26T23-33-15-019dcda4-600d-7e72-83af-96560a62fb09",
+      "directory": "2026/04/26",
+      "inputTokens": 2794624,
+      "cachedInputTokens": 2663936,
+      "outputTokens": 13349,
+      "reasoningOutputTokens": 5091,
+      "totalTokens": 2807973,
+      "costUSD": 2.385878,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 2794624,
+          "cachedInputTokens": 2663936,
+          "outputTokens": 13349,
+          "reasoningOutputTokens": 5091,
+          "totalTokens": 2807973,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T23-40-42-019dcdab-33fa-73c3-a127-ef427c201429",
+      "lastActivity": "2026-04-27T06:49:19.218Z",
+      "sessionFile": "rollout-2026-04-26T23-40-42-019dcdab-33fa-73c3-a127-ef427c201429",
+      "directory": "2026/04/26",
+      "inputTokens": 933261,
+      "cachedInputTokens": 833280,
+      "outputTokens": 8337,
+      "reasoningOutputTokens": 2425,
+      "totalTokens": 941598,
+      "costUSD": 1.166655,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 933261,
+          "cachedInputTokens": 833280,
+          "outputTokens": 8337,
+          "reasoningOutputTokens": 2425,
+          "totalTokens": 941598,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/26/rollout-2026-04-26T23-51-10-019dcdb4-c737-75f0-ab9e-0c6084e04633",
+      "lastActivity": "2026-04-27T07:01:28.008Z",
+      "sessionFile": "rollout-2026-04-26T23-51-10-019dcdb4-c737-75f0-ab9e-0c6084e04633",
+      "directory": "2026/04/26",
+      "inputTokens": 7363142,
+      "cachedInputTokens": 7151616,
+      "outputTokens": 30920,
+      "reasoningOutputTokens": 11893,
+      "totalTokens": 7394062,
+      "costUSD": 5.561038,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 7363142,
+          "cachedInputTokens": 7151616,
+          "outputTokens": 30920,
+          "reasoningOutputTokens": 11893,
+          "totalTokens": 7394062,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "sessionId": "2026/04/27/rollout-2026-04-27T00-41-42-019dcde3-0b82-7ff3-8a36-54ef34b90e63",
+      "lastActivity": "2026-04-27T08:41:33.968Z",
+      "sessionFile": "rollout-2026-04-27T00-41-42-019dcde3-0b82-7ff3-8a36-54ef34b90e63",
+      "directory": "2026/04/27",
+      "inputTokens": 70415816,
+      "cachedInputTokens": 69083520,
+      "outputTokens": 165922,
+      "reasoningOutputTokens": 38334,
+      "totalTokens": 70581738,
+      "costUSD": 46.180899999999994,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 70415816,
+          "cachedInputTokens": 69083520,
+          "outputTokens": 165922,
+          "reasoningOutputTokens": 38334,
+          "totalTokens": 70581738,
           "isFallback": false
         }
       }
     }
   ],
   "totals": {
-    "inputTokens": 587751081,
-    "cachedInputTokens": 569530880,
-    "outputTokens": 2496491,
-    "reasoningOutputTokens": 958055,
-    "totalTokens": 590247572,
-    "costUSD": 405.9739635
+    "inputTokens": 596663793,
+    "cachedInputTokens": 578357760,
+    "outputTokens": 2511271,
+    "reasoningOutputTokens": 960274,
+    "totalTokens": 599175064,
+    "costUSD": 411.25996349999986
   }
 }
