@@ -235,6 +235,14 @@ function collectRows(report) {
     rows.push(...report.rows);
   }
 
+  if (Array.isArray(report.sessions)) {
+    rows.push(...report.sessions);
+  }
+
+  if (Array.isArray(report.blocks)) {
+    rows.push(...report.blocks);
+  }
+
   if (report.projects && typeof report.projects === 'object') {
     for (const [project, projectRows] of Object.entries(report.projects)) {
       if (Array.isArray(projectRows)) {

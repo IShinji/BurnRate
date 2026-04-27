@@ -70,6 +70,15 @@ bun run generate:card
 CCUSAGE_SINCE=20260401 bun run export:data
 ```
 
+### 🔍 查看单次对话或计费窗口消耗
+
+默认情况下，`BurnRate` 生成的是每日汇总图表。如果你想查看更细粒度的消耗（如单次对话会话或 5 小时计费窗口），可以切换 `CCUSAGE_REPORT` 模式：
+
+- **查看对话会话**：`CCUSAGE_REPORT=session bun run sync`
+- **查看计费窗口**：`CCUSAGE_REPORT=blocks bun run sync`
+
+*注意：切换模式后，卡片图表仍会按日期汇总显示，但底层 `data/` 中的 JSON 将包含单次会话的详细 Token 消耗、模型分布和成本。*
+
 ## 💡 提示词效率与燃耗分析 (Burn Rate Analysis)
 
 通过 `BurnRate` 追踪你的 Token 使用量，不仅是为了看花了多少钱，更是为了评估你的**提示词效率**。
