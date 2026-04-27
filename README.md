@@ -57,7 +57,7 @@ bun run generate:card
 将生成的卡片嵌入你的 GitHub Profile：
 
 ```markdown
-![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BunRate/main/assets/ccusage-card.svg)
+![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
 ```
 
 ## Options / 选项

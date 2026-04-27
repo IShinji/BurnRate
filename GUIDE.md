@@ -42,7 +42,7 @@ bun run generate:card
 在你的 GitHub Profile README 中添加以下代码（将 `<owner>` 替换为你的 GitHub 用户名）：
 
 ```markdown
-![ccusage stats](https://raw.githubusercontent.com/<owner>/BunRate/main/assets/ccusage-card.svg)
+![ccusage stats](https://raw.githubusercontent.com/<owner>/BurnRate/main/assets/ccusage-card.svg)
 ```
 
 ## 进阶配置
