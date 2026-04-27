@@ -1,48 +1,28 @@
 {
-  "daily": [
+  "sessions": [
     {
-      "date": "2026-04-21",
-      "inputTokens": 679,
-      "outputTokens": 642203,
-      "cacheCreationTokens": 12716567,
-      "cacheReadTokens": 150812833,
-      "totalTokens": 164172282,
-      "totalCost": 170.94343024999995,
+      "sessionId": "-Users-wisely-Documents-GitHub-SuperCard",
+      "inputTokens": 5978,
+      "outputTokens": 964255,
+      "cacheCreationTokens": 15750745,
+      "cacheReadTokens": 250875453,
+      "totalTokens": 267596431,
+      "totalCost": 248.0161477500001,
+      "lastActivity": "2026-04-22",
       "modelsUsed": [
         "claude-opus-4-7"
       ],
       "modelBreakdowns": [
         {
           "modelName": "claude-opus-4-7",
-          "inputTokens": 679,
-          "outputTokens": 642203,
-          "cacheCreationTokens": 12716567,
-          "cacheReadTokens": 150812833,
-          "cost": 170.94343024999995
+          "inputTokens": 5978,
+          "outputTokens": 964255,
+          "cacheCreationTokens": 15750745,
+          "cacheReadTokens": 250875453,
+          "cost": 248.0161477500001
         }
-      ]
-    },
-    {
-      "date": "2026-04-22",
-      "inputTokens": 5299,
-      "outputTokens": 322052,
-      "cacheCreationTokens": 3034178,
-      "cacheReadTokens": 100062620,
-      "totalTokens": 103424149,
-      "totalCost": 77.07271749999998,
-      "modelsUsed": [
-        "claude-opus-4-7"
       ],
-      "modelBreakdowns": [
-        {
-          "modelName": "claude-opus-4-7",
-          "inputTokens": 5299,
-          "outputTokens": 322052,
-          "cacheCreationTokens": 3034178,
-          "cacheReadTokens": 100062620,
-          "cost": 77.07271749999998
-        }
-      ]
+      "projectPath": "Unknown Project"
     }
   ],
   "totals": {
@@ -50,7 +30,7 @@
     "outputTokens": 964255,
     "cacheCreationTokens": 15750745,
     "cacheReadTokens": 250875453,
-    "totalCost": 248.01614774999993,
+    "totalCost": 248.0161477500001,
     "totalTokens": 267596431
   }
 }
