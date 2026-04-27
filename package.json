@@ -6,6 +6,7 @@
     "export:data": "bash scripts/export-ccusage-data.sh",
     "generate": "node scripts/generate-ccusage-card.mjs",
     "generate:card": "node scripts/generate-ccusage-card.mjs",
+    "analyze": "node scripts/analyze-usage.mjs",
     "sync": "bash scripts/sync.sh"
   },
   "engines": {
