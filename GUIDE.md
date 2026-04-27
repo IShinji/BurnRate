@@ -17,7 +17,7 @@ curl -fsSL https://bun.sh/install | bash
 运行以下命令从本地 `ccusage` 相关工具导出数据：
 
 ```bash
-bun run export:ccusage
+bun run export:data
 ```
 
 这会自动运行以下命令并将 JSON 结果存入 `data/` 目录：
@@ -57,7 +57,7 @@ bun run generate:card
 
 例如：
 ```bash
-CCUSAGE_SINCE=20260401 bun run export:ccusage
+CCUSAGE_SINCE=20260401 bun run export:data
 ```
 
 ## 自动更新 (GitHub Actions)
