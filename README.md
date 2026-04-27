@@ -7,13 +7,15 @@ Generate a GitHub profile SVG card from the ccusage family of local JSON exports
 
 ---
 
-## Usage
+### 🚀 One-Step Sync (Recommended)
 
-Run the local exporter from this repository:
+Run everything (export, generate, and push) with a single command:
 
 ```bash
-bun run export:ccusage
+bun run sync
 ```
+
+### Manual Steps
 
 The exporter calls these commands and writes one JSON file per tool into `data/`:
 
@@ -35,13 +37,15 @@ bun run generate:card
 
 ## 中文说明
 
-### 使用方法
+### 🚀 一键同步（推荐）
 
-1. **导出数据**:
-   ```bash
-   bun run export:ccusage
-   ```
-   这会从你本地安装的 `ccusage` 工具中收集统计信息并存入 `data/` 目录。
+使用一个命令完成所有操作（导出、生成并推送）：
+
+```bash
+bun run sync
+```
+
+### 分步手动操作
 
 2. **生成卡片**:
    ```bash
@@ -66,7 +70,7 @@ Set environment variables before running the exporter:
 在运行导出脚本前设置环境变量：
 
 ```bash
-CCUSAGE_SINCE=20260401 CCUSAGE_TIMEZONE=UTC bun run export:ccusage
+CCUSAGE_SINCE=20260401 CCUSAGE_TIMEZONE=UTC bun run sync
 ```
 
 - `CCUSAGE_SINCE`: optional start date (e.g. `20260401`) / 可选开始日期
