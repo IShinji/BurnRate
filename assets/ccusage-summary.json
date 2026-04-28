@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-28T11:08:41.109Z",
+  "generatedAt": "2026-04-28T11:18:51.249Z",
   "dateRange": {
     "start": "2026-02-21",
     "end": "2026-04-28"
   },
   "totals": {
-    "costUSD": 876.72,
+    "costUSD": 882.85,
     "credits": 0,
-    "tokens": 1229610703
+    "tokens": 1238478926
   },
   "tools": [
     {
@@ -34,9 +34,9 @@
       "id": "codex",
       "name": "Codex",
       "color": "#10A37F",
-      "costUSD": 628.7,
+      "costUSD": 634.83,
       "credits": 0,
-      "tokens": 962014272,
+      "tokens": 970882495,
       "dates": 20,
       "files": [
         "data/codex-Shinji-MacBook-M4.json",
@@ -45,8 +45,8 @@
       "models": [
         {
           "name": "gpt-5.5",
-          "costUSD": 552.57,
-          "tokens": 792325272
+          "costUSD": 558.7,
+          "tokens": 801193495
         },
         {
           "name": "gpt-5.4",
@@ -606,29 +606,29 @@
     },
     {
       "date": "2026-04-28",
-      "costUSD": 8.55,
+      "costUSD": 14.67,
       "credits": 0,
-      "tokens": 11505803,
+      "tokens": 20374026,
       "tools": {
         "codex": {
           "name": "Codex",
-          "costUSD": 8.546779,
+          "costUSD": 14.672883,
           "credits": 0,
-          "tokens": 11505803,
+          "tokens": 20374026,
           "models": {
             "gpt-5.5": {
-              "costUSD": 8.546779,
-              "tokens": 11505803
+              "costUSD": 14.672883,
+              "tokens": 20374026
             }
           }
         }
       },
-      "cumulativeCostUSD": 876.72,
-      "cumulativeTokens": 1229610703,
+      "cumulativeCostUSD": 882.84,
+      "cumulativeTokens": 1238478926,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 267596431,
-        "codex": 962014272,
+        "codex": 970882495,
         "opencode": 0,
         "pi": 0,
         "amp": 0
