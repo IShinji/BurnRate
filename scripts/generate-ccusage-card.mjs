@@ -698,8 +698,8 @@ function renderCard(summary, title) {
         <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="${tool.color}"/>
         <text x="44" y="29" class="tool-name">${xml(tool.name)}</text>
-        <text x="24" y="55" class="tool-metric">${xml(formatCompact(tool.tokens))} tokens</text>
-        <text x="24" y="78" class="tool-muted">spent ${xml(formatUsd(tool.costUSD))}</text>
+        <text x="44" y="55" class="tool-metric">${xml(formatCompact(tool.tokens))} tokens</text>
+        <text x="44" y="78" class="tool-muted">spent ${xml(formatUsd(tool.costUSD))}</text>
         <g transform="translate(240, 20)">
           ${tool.models.slice(0, 3).map((m, i) => `
             <text x="0" y="${i * 20}" class="model-item">${xml(m.name.length > 20 ? m.name.slice(0, 17) + '...' : m.name)}</text>
