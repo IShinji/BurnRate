@@ -29,14 +29,14 @@
   <rect width="1000" height="760" rx="32" fill="url(#bg)"/>
   
   <text x="40" y="75" class="title">Burn Rate</text>
-  <text x="40" y="105" class="subtitle">AI Engineering &amp; Intelligence Volume Statistics / Updated 2026-04-29 06:09 UTC</text>
+  <text x="40" y="105" class="subtitle">AI Engineering &amp; Intelligence Volume Statistics / Updated 2026-04-29 06:10 UTC</text>
 
   <!-- Key Metrics Row -->
   <g transform="translate(40, 150)">
     <g transform="translate(10, 0)">
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">1.503B Tokens</text>
-      <text x="5" y="78" class="badge" font-size="16">+284.89M today</text>
+      <text x="5" y="78" class="badge" font-size="16">+284.89M latest</text>
     </g>
     <g transform="translate(440, 0)">
       <text y="0" class="label">Historical Cost</text>
