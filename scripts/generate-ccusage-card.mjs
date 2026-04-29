@@ -745,17 +745,17 @@ function renderCard(summary, title) {
 
   <!-- Key Metrics Row -->
   <g transform="translate(${margin}, 150)">
-    <g>
+    <g transform="translate(10, 0)">
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">${xml(formatCompact(summary.totals.tokens))} Tokens</text>
       <text x="5" y="78" class="badge" font-size="16">${xml(deltaText)}</text>
     </g>
-    <g transform="translate(420, 0)">
+    <g transform="translate(440, 0)">
       <text y="0" class="label">Historical Cost</text>
       <text y="42" class="stat-val">${xml(formatUsd(summary.totals.costUSD))}</text>
       <text y="62" class="tool-muted">Across ${totalDays} active production days</text>
     </g>
-    <g transform="translate(700, 0)">
+    <g transform="translate(720, 0)">
       <text y="0" class="label">Main Architecture</text>
       <text y="42" class="stat-val" fill="#10B981">${xml(topModel)}</text>
       <text y="62" class="tool-muted">Dominant LLM backend</text>
