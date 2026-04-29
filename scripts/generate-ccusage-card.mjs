@@ -697,9 +697,9 @@ function renderCard(summary, title) {
       <g transform="translate(${x}, ${y})">
         <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="${tool.color}"/>
-        <text x="44" y="29" class="tool-name">${xml(tool.name)}</text>
-        <text x="44" y="55" class="tool-metric">${xml(formatCompact(tool.tokens))} tokens</text>
-        <text x="44" y="78" class="tool-muted">spent ${xml(formatUsd(tool.costUSD))}</text>
+        <text x="60" y="29" class="tool-name">${xml(tool.name)}</text>
+        <text x="60" y="55" class="tool-metric">${xml(formatCompact(tool.tokens))} tokens</text>
+        <text x="60" y="78" class="tool-muted">spent ${xml(formatUsd(tool.costUSD))}</text>
         <g transform="translate(240, 20)">
           ${tool.models.slice(0, 3).map((m, i) => `
             <text x="0" y="${i * 20}" class="model-item">${xml(m.name.length > 20 ? m.name.slice(0, 17) + '...' : m.name)}</text>
@@ -745,7 +745,7 @@ function renderCard(summary, title) {
 
   <!-- Key Metrics Row -->
   <g transform="translate(${margin}, 150)">
-    <g transform="translate(10, 0)">
+    <g transform="translate(30, 0)">
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">${xml(formatCompact(summary.totals.tokens))} Tokens</text>
       <text x="5" y="78" class="badge" font-size="16">${xml(deltaText)}</text>

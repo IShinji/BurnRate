@@ -29,14 +29,14 @@
   <rect width="1000" height="760" rx="32" fill="url(#bg)"/>
   
   <text x="40" y="75" class="title">Burn Rate</text>
-  <text x="40" y="105" class="subtitle">AI Engineering &amp; Intelligence Volume Statistics / Updated 2026-04-29 06:11 UTC</text>
+  <text x="40" y="105" class="subtitle">AI Engineering &amp; Intelligence Volume Statistics / Updated 2026-04-29 06:12 UTC</text>
 
   <!-- Key Metrics Row -->
   <g transform="translate(40, 150)">
-    <g transform="translate(10, 0)">
+    <g transform="translate(30, 0)">
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">1.509B Tokens</text>
-      <text x="5" y="78" class="badge" font-size="16">+291.1M latest</text>
+      <text x="5" y="78" class="badge" font-size="16">+291.1M today</text>
     </g>
     <g transform="translate(440, 0)">
       <text y="0" class="label">Historical Cost</text>
@@ -57,9 +57,9 @@
       <g transform="translate(40, 280)">
         <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="#10A37F"/>
-        <text x="44" y="29" class="tool-name">Codex</text>
-        <text x="44" y="55" class="tool-metric">1.242B tokens</text>
-        <text x="44" y="78" class="tool-muted">spent $821.18</text>
+        <text x="60" y="29" class="tool-name">Codex</text>
+        <text x="60" y="55" class="tool-metric">1.242B tokens</text>
+        <text x="60" y="78" class="tool-muted">spent $821.18</text>
         <g transform="translate(240, 20)">
           
             <text x="0" y="0" class="model-item">gpt-5.5</text>
@@ -77,9 +77,9 @@
       <g transform="translate(500, 280)">
         <rect width="440" height="90" rx="16" fill="white" stroke="#F1F5F9" stroke-width="2"/>
         <circle cx="24" cy="24" r="8" fill="#6E56CF"/>
-        <text x="44" y="29" class="tool-name">Claude Code</text>
-        <text x="44" y="55" class="tool-metric">267.6M tokens</text>
-        <text x="44" y="78" class="tool-muted">spent $248.02</text>
+        <text x="60" y="29" class="tool-name">Claude Code</text>
+        <text x="60" y="55" class="tool-metric">267.6M tokens</text>
+        <text x="60" y="78" class="tool-muted">spent $248.02</text>
         <g transform="translate(240, 20)">
           
             <text x="0" y="0" class="model-item">claude-opus-4-7</text>
