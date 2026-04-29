@@ -620,10 +620,17 @@ function formatNumber(value) {
 }
 
 function formatCompact(value) {
+  const num = Number(value) || 0;
+  let digits = 1;
+  if (num >= 1000000000) {
+    digits = 3; // 1.503B
+  } else if (num >= 1000000) {
+    digits = 2; // 267.60M
+  }
   return new Intl.NumberFormat('en-US', {
     notation: 'compact',
-    maximumFractionDigits: 1,
-  }).format(Number(value) || 0);
+    maximumFractionDigits: digits,
+  }).format(num);
 }
 
 function formatPercent(value) {
@@ -654,6 +661,18 @@ function renderCard(summary, title) {
   
   const updated = new Date(summary.generatedAt).toISOString().replace('T', ' ').slice(0, 16);
   const subtitle = `AI Engineering & Intelligence Volume Statistics / Updated ${updated} UTC`;
+
+  // Calculate local today's delta
+  const now = new Date();
+  const offset = now.getTimezoneOffset() * 60000;
+  const localToday = new Date(now - offset).toISOString().split('T')[0];
+  
+  const todayData = summary.daily.find(d => d.date === localToday);
+  const lastDay = summary.daily[summary.daily.length - 1];
+  const deltaTokens = todayData ? todayData.tokens : lastDay.tokens;
+  const isActuallyToday = !!todayData;
+  const deltaLabel = isActuallyToday ? 'today' : 'latest';
+  const deltaText = `+${formatCompact(deltaTokens)} ${deltaLabel}`;
 
   // Highlights
   const totalDays = summary.daily.length;
@@ -729,6 +748,7 @@ function renderCard(summary, title) {
     <g>
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">${xml(formatCompact(summary.totals.tokens))} Tokens</text>
+      <text x="5" y="78" class="badge" font-size="16">${xml(deltaText)}</text>
     </g>
     <g transform="translate(420, 0)">
       <text y="0" class="label">Historical Cost</text>
