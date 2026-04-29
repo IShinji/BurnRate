@@ -55,6 +55,20 @@ bun run generate:card
 ![ccusage stats](https://raw.githubusercontent.com/<owner>/BurnRate/main/assets/ccusage-card.svg)
 ```
 
+生成后的卡片将展示总消耗量、工具/模型细分、以及趋势增长曲线。
+
+## 🎨 UI 与数值特性
+
+为了应对日益增长的数据量（尤其是进入 Billion 级别后），卡片具备以下特性：
+
+- **动态精度 (Dynamic Precision)**：
+  - 当数据 >= **1B** 时，自动保留 **3 位小数**（如 `1.503B`），确保 1M 级别的更新也能体现在总数上。
+  - 当数据 >= **1M** 时，保留 **2 位小数**（如 `267.60M`）。
+- **本地今日增量 (Local Today Delta)**：
+  - 在总量下方会显示 `+XX today` 或 `+XX latest`。
+  - **Today** 标识：根据你运行脚本时的**本地系统时间**判断。如果当天有更新，则显示今日增量。
+  - **Latest** 标识：如果今日尚未产生数据，则显示最后一次统计到的增量，确保视觉反馈不为空。
+
 ## 进阶配置
 
 你可以通过环境变量调整导出行为：

@@ -65,13 +65,16 @@ bun run analyze
 3. **详细配置**:
    请参考 [使用指南 (GUIDE.md)](./GUIDE.md) 查看环境变量和进阶用法。
 
-### 引用方式
-
-将生成的卡片嵌入你的 GitHub Profile：
-
 ```markdown
 ![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
 ```
+
+### ✨ Modern Analytics Features / 现代分析特性
+
+- **Dynamic Precision**: Automatic precision scaling for Billion-scale data (e.g., `1.503B`).
+- **Local Today Delta**: Real-time daily growth display based on your local timezone.
+- **动态精度**: 针对 B 级数据自动调整小数点（如 `1.503B`），确保百万级更新可见。
+- **本地增量**: 基于用户本地时区的每日增长实时展示（`+XX today`）。
 
 ## Options / 选项
 
