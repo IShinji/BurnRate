@@ -36,7 +36,7 @@
     <g transform="translate(15, 0)">
       <text y="0" class="label">Total Intelligence Volume</text>
       <text y="50" class="total-val">3.171B Tokens</text>
-      <text x="5" y="78" class="badge" font-size="16">+170.56M today</text>
+      <text x="5" y="78" class="badge" font-size="16">+170.56M latest</text>
     </g>
     <g transform="translate(440, 0)">
       <text y="0" class="label">Historical Cost</text>
