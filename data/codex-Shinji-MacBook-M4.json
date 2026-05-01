@@ -211,12 +211,12 @@
     },
     {
       "date": "Apr 30, 2026",
-      "inputTokens": 188364188,
-      "cachedInputTokens": 180381952,
-      "outputTokens": 539638,
-      "reasoningOutputTokens": 238790,
-      "totalTokens": 188903826,
-      "costUSD": 140.52917465000002,
+      "inputTokens": 197013982,
+      "cachedInputTokens": 186687616,
+      "outputTokens": 589843,
+      "reasoningOutputTokens": 271058,
+      "totalTokens": 197603825,
+      "costUSD": 146.43776335,
       "models": {
         "gpt-5.5": {
           "inputTokens": 184934497,
@@ -227,22 +227,41 @@
           "isFallback": false
         },
         "gpt-5.3-codex": {
-          "inputTokens": 3429691,
-          "cachedInputTokens": 1994368,
-          "outputTokens": 28072,
-          "reasoningOutputTokens": 17637,
-          "totalTokens": 3457763,
+          "inputTokens": 12079485,
+          "cachedInputTokens": 8300032,
+          "outputTokens": 78277,
+          "reasoningOutputTokens": 49905,
+          "totalTokens": 12157762,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 01, 2026",
+      "inputTokens": 53559461,
+      "cachedInputTokens": 52610944,
+      "outputTokens": 124045,
+      "reasoningOutputTokens": 41368,
+      "totalTokens": 53683506,
+      "costUSD": 34.769407,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 53559461,
+          "cachedInputTokens": 52610944,
+          "outputTokens": 124045,
+          "reasoningOutputTokens": 41368,
+          "totalTokens": 53683506,
           "isFallback": false
         }
       }
     }
   ],
   "totals": {
-    "inputTokens": 1552840538,
-    "cachedInputTokens": 1511110784,
-    "outputTokens": 5081928,
-    "reasoningOutputTokens": 1866930,
-    "totalTokens": 1557922466,
-    "costUSD": 1066.11266915
+    "inputTokens": 1615049793,
+    "cachedInputTokens": 1570027392,
+    "outputTokens": 5256178,
+    "reasoningOutputTokens": 1940566,
+    "totalTokens": 1620305971,
+    "costUSD": 1106.79066485
   }
 }
