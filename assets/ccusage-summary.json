@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-01T02:07:51.429Z",
+  "generatedAt": "2026-05-01T04:55:57.666Z",
   "dateRange": {
     "start": "2026-02-21",
     "end": "2026-04-30"
   },
   "totals": {
-    "costUSD": 2515.35,
+    "costUSD": 2540.96,
     "credits": 0,
-    "tokens": 3536379998
+    "tokens": 3567266944
   },
   "tools": [
     {
@@ -35,9 +35,9 @@
       "id": "codex",
       "name": "Codex",
       "color": "#10A37F",
-      "costUSD": 2019.32,
+      "costUSD": 2044.93,
       "credits": 0,
-      "tokens": 3001187136,
+      "tokens": 3032074082,
       "dates": 34,
       "files": [
         "data/codex-Mac.json",
@@ -47,8 +47,8 @@
       "models": [
         {
           "name": "gpt-5.5",
-          "costUSD": 1898.4,
-          "tokens": 2735234909
+          "costUSD": 1921.44,
+          "tokens": 2762664092
         },
         {
           "name": "gpt-5.4",
@@ -57,8 +57,8 @@
         },
         {
           "name": "gpt-5.3-codex",
-          "costUSD": 21.64,
-          "tokens": 56427361
+          "costUSD": 24.22,
+          "tokens": 59885124
         }
       ]
     },
@@ -671,29 +671,33 @@
     },
     {
       "date": "2026-04-30",
-      "costUSD": 128.26,
+      "costUSD": 153.88,
       "credits": 0,
-      "tokens": 178297800,
+      "tokens": 209184746,
       "tools": {
         "codex": {
           "name": "Codex",
-          "costUSD": 128.259473,
+          "costUSD": 153.87683165,
           "credits": 0,
-          "tokens": 178297800,
+          "tokens": 209184746,
           "models": {
             "gpt-5.5": {
-              "costUSD": 128.259473,
-              "tokens": 178297800
+              "costUSD": 151.3045355201942,
+              "tokens": 205726983
+            },
+            "gpt-5.3-codex": {
+              "costUSD": 2.5722961298057987,
+              "tokens": 3457763
             }
           }
         }
       },
-      "cumulativeCostUSD": 2515.35,
-      "cumulativeTokens": 3536379998,
+      "cumulativeCostUSD": 2540.97,
+      "cumulativeTokens": 3567266944,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 535192862,
-        "codex": 3001187136,
+        "codex": 3032074082,
         "opencode": 0,
         "pi": 0,
         "amp": 0
