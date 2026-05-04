@@ -211,30 +211,122 @@
     },
     {
       "date": "Apr 30, 2026",
-      "inputTokens": 20240799,
-      "cachedInputTokens": 19791104,
-      "outputTokens": 40121,
-      "reasoningOutputTokens": 16183,
-      "totalTokens": 20280920,
-      "costUSD": 13.347657000000002,
+      "inputTokens": 197013982,
+      "cachedInputTokens": 186687616,
+      "outputTokens": 589843,
+      "reasoningOutputTokens": 271058,
+      "totalTokens": 197603825,
+      "costUSD": 146.43776335,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 20240799,
-          "cachedInputTokens": 19791104,
-          "outputTokens": 40121,
-          "reasoningOutputTokens": 16183,
-          "totalTokens": 20280920,
+          "inputTokens": 184934497,
+          "cachedInputTokens": 178387584,
+          "outputTokens": 511566,
+          "reasoningOutputTokens": 221153,
+          "totalTokens": 185446063,
+          "isFallback": false
+        },
+        "gpt-5.3-codex": {
+          "inputTokens": 12079485,
+          "cachedInputTokens": 8300032,
+          "outputTokens": 78277,
+          "reasoningOutputTokens": 49905,
+          "totalTokens": 12157762,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 01, 2026",
+      "inputTokens": 226104527,
+      "cachedInputTokens": 220917888,
+      "outputTokens": 461151,
+      "reasoningOutputTokens": 154474,
+      "totalTokens": 226565678,
+      "costUSD": 150.22666900000002,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 226104527,
+          "cachedInputTokens": 220917888,
+          "outputTokens": 461151,
+          "reasoningOutputTokens": 154474,
+          "totalTokens": 226565678,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 02, 2026",
+      "inputTokens": 482286451,
+      "cachedInputTokens": 472993920,
+      "outputTokens": 934773,
+      "reasoningOutputTokens": 282614,
+      "totalTokens": 483221224,
+      "costUSD": 311.00280499999997,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 482286451,
+          "cachedInputTokens": 472993920,
+          "outputTokens": 934773,
+          "reasoningOutputTokens": 282614,
+          "totalTokens": 483221224,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 03, 2026",
+      "inputTokens": 553808435,
+      "cachedInputTokens": 541993344,
+      "outputTokens": 1245935,
+      "reasoningOutputTokens": 425624,
+      "totalTokens": 555054370,
+      "costUSD": 367.45017700000005,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 553808435,
+          "cachedInputTokens": 541993344,
+          "outputTokens": 1245935,
+          "reasoningOutputTokens": 425624,
+          "totalTokens": 555054370,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 04, 2026",
+      "inputTokens": 284073111,
+      "cachedInputTokens": 277082112,
+      "outputTokens": 673330,
+      "reasoningOutputTokens": 269215,
+      "totalTokens": 284746441,
+      "costUSD": 189.385028,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 279858028,
+          "cachedInputTokens": 273040256,
+          "outputTokens": 625868,
+          "reasoningOutputTokens": 230234,
+          "totalTokens": 280483896,
+          "isFallback": false
+        },
+        "gpt-5.3-codex-spark": {
+          "inputTokens": 4215083,
+          "cachedInputTokens": 4041856,
+          "outputTokens": 47462,
+          "reasoningOutputTokens": 38981,
+          "totalTokens": 4262545,
           "isFallback": false
         }
       }
     }
   ],
   "totals": {
-    "inputTokens": 1384717149,
-    "cachedInputTokens": 1350519936,
-    "outputTokens": 4582411,
-    "reasoningOutputTokens": 1644323,
-    "totalTokens": 1389299560,
-    "costUSD": 938.9311515
+    "inputTokens": 3107762856,
+    "cachedInputTokens": 3030403712,
+    "outputTokens": 8447322,
+    "reasoningOutputTokens": 3031125,
+    "totalTokens": 3116210178,
+    "costUSD": 2090.0859368500005
   }
 }
