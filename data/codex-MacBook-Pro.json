@@ -295,30 +295,57 @@
     },
     {
       "date": "May 04, 2026",
-      "inputTokens": 234997996,
-      "cachedInputTokens": 230069632,
-      "outputTokens": 509704,
-      "reasoningOutputTokens": 177474,
-      "totalTokens": 235507700,
-      "costUSD": 154.967756,
+      "inputTokens": 568814577,
+      "cachedInputTokens": 554143104,
+      "outputTokens": 1388697,
+      "reasoningOutputTokens": 554664,
+      "totalTokens": 570203274,
+      "costUSD": 374.37048699999997,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 234997996,
-          "cachedInputTokens": 230069632,
-          "outputTokens": 509704,
-          "reasoningOutputTokens": 177474,
-          "totalTokens": 235507700,
+          "inputTokens": 550071017,
+          "cachedInputTokens": 536185344,
+          "outputTokens": 1228315,
+          "reasoningOutputTokens": 435046,
+          "totalTokens": 551299332,
+          "isFallback": false
+        },
+        "gpt-5.3-codex-spark": {
+          "inputTokens": 18743560,
+          "cachedInputTokens": 17957760,
+          "outputTokens": 160382,
+          "reasoningOutputTokens": 119618,
+          "totalTokens": 18903942,
+          "isFallback": false
+        }
+      }
+    },
+    {
+      "date": "May 05, 2026",
+      "inputTokens": 187039360,
+      "cachedInputTokens": 180606080,
+      "outputTokens": 595631,
+      "reasoningOutputTokens": 231054,
+      "totalTokens": 187634991,
+      "costUSD": 140.33837,
+      "models": {
+        "gpt-5.5": {
+          "inputTokens": 187039360,
+          "cachedInputTokens": 180606080,
+          "outputTokens": 595631,
+          "reasoningOutputTokens": 231054,
+          "totalTokens": 187634991,
           "isFallback": false
         }
       }
     }
   ],
   "totals": {
-    "inputTokens": 3058687741,
-    "cachedInputTokens": 2983391232,
-    "outputTokens": 8283696,
-    "reasoningOutputTokens": 2939384,
-    "totalTokens": 3066971437,
-    "costUSD": 2055.6686648500004
+    "inputTokens": 3579543682,
+    "cachedInputTokens": 3488070784,
+    "outputTokens": 9758320,
+    "reasoningOutputTokens": 3547628,
+    "totalTokens": 3589302002,
+    "costUSD": 2415.4097658500004
   }
 }
