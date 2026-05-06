@@ -12,6 +12,22 @@
 bun run sync
 ```
 
+### 🛠️ Fork 后使用指南 (给新用户)
+
+如果你刚刚 Fork 了这个仓库：
+
+1. 克隆你的 Fork 仓库到本地。
+2. 确保你已经安装了 [Bun](https://bun.sh/)。
+3. 清理上一任所有者的模板数据：
+   ```bash
+   bun run clean
+   ```
+4. 运行同步命令来生成你的专属数据：
+   ```bash
+   bun run sync
+   ```
+5. **重要权限设置**：前往你 Fork 后的 GitHub 仓库，点击 **Settings -> Actions -> General**。在底部找到 **Workflow permissions**，选择 **Read and write permissions** 并保存。这样 GitHub Actions 才能自动提交更新后的卡片。
+
 ### 逐步手动操作
 
 ### 1. 环境准备

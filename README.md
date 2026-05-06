@@ -15,6 +15,25 @@ Run everything (export, generate, and push) with a single command:
 bun run sync
 ```
 
+### 🛠️ Using Your Own Fork (For New Users)
+
+If you just forked this repository to track your own usage:
+
+1. Clone your fork locally.
+2. Clean the template data:
+   ```bash
+   bun run clean
+   ```
+3. Run the sync command to generate and push your data!
+   ```bash
+   bun run sync
+   ```
+4. Update your GitHub Profile README: Replace `<owner>` with your GitHub username:
+   ```markdown
+   ![ccusage stats](https://raw.githubusercontent.com/<owner>/BurnRate/main/assets/ccusage-card.svg)
+   ```
+   *(Note: Ensure your GitHub Actions have "Read and write permissions" enabled in Settings -> Actions -> General)*
+
 ### Manual Steps
 
 The exporter calls these commands and writes one JSON file per tool into `data/`:
@@ -44,6 +63,25 @@ bun run generate:card
 ```bash
 bun run sync
 ```
+
+### 🛠️ Fork 后如何使用 (给新用户)
+
+如果你刚刚 Fork 了这个仓库来追踪你自己的使用量：
+
+1. 克隆你的 Fork 仓库到本地。
+2. 清理模板数据：
+   ```bash
+   bun run clean
+   ```
+3. 运行同步命令来生成并推送你的专属数据！
+   ```bash
+   bun run sync
+   ```
+4. 更新你的 GitHub 个人主页 README：将 `<你的用户名>` 替换为你的 GitHub 用户名：
+   ```markdown
+   ![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
+   ```
+   *(注意：请确保你的 GitHub Actions 在 Settings -> Actions -> General 中开启了 "Read and write permissions" 权限)*
 
 ### 分步手动操作
 

@@ -37,13 +37,19 @@ git add .
 # We use || true in case there are no changes to commit (though porcelain check should cover it)
 git commit -m "chore: update ccusage data and card (automated sync)" || echo "⚠️ Nothing to commit."
 
+# Get current branch
+CURRENT_BRANCH=$(git branch --show-current)
+if [[ -z "$CURRENT_BRANCH" ]]; then
+    CURRENT_BRANCH="main"
+fi
+
 # Pull from remote with rebase and automatic conflict resolution for assets
 # -X theirs tells git to favor our local version (the one just generated) for any conflicts
-echo "📡 Pulling remote updates..."
-git pull origin main --rebase -X theirs
+echo "📡 Pulling remote updates for branch: $CURRENT_BRANCH..."
+git pull origin "$CURRENT_BRANCH" --rebase -X theirs
 
 # Final Push
 echo "⬆️ Pushing to GitHub..."
-git push origin main
+git push origin "$CURRENT_BRANCH"
 
 echo "✨ Sync complete! Your stats are now live."
