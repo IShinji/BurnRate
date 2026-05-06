@@ -322,30 +322,30 @@
     },
     {
       "date": "May 05, 2026",
-      "inputTokens": 330955942,
-      "cachedInputTokens": 320357120,
-      "outputTokens": 900764,
-      "reasoningOutputTokens": 339628,
-      "totalTokens": 331856706,
-      "costUSD": 240.19559,
+      "inputTokens": 358813776,
+      "cachedInputTokens": 347734272,
+      "outputTokens": 977585,
+      "reasoningOutputTokens": 372587,
+      "totalTokens": 359791361,
+      "costUSD": 258.59220600000003,
       "models": {
         "gpt-5.5": {
-          "inputTokens": 330955942,
-          "cachedInputTokens": 320357120,
-          "outputTokens": 900764,
-          "reasoningOutputTokens": 339628,
-          "totalTokens": 331856706,
+          "inputTokens": 358813776,
+          "cachedInputTokens": 347734272,
+          "outputTokens": 977585,
+          "reasoningOutputTokens": 372587,
+          "totalTokens": 359791361,
           "isFallback": false
         }
       }
     }
   ],
   "totals": {
-    "inputTokens": 3723460264,
-    "cachedInputTokens": 3627821824,
-    "outputTokens": 10063453,
-    "reasoningOutputTokens": 3656202,
-    "totalTokens": 3733523717,
-    "costUSD": 2515.2669858500003
+    "inputTokens": 3751318098,
+    "cachedInputTokens": 3655198976,
+    "outputTokens": 10140274,
+    "reasoningOutputTokens": 3689161,
+    "totalTokens": 3761458372,
+    "costUSD": 2533.6636018500003
   }
 }
