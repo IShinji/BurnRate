@@ -68,7 +68,7 @@ bun run generate:card
 在你的 GitHub Profile README 中添加以下代码（将 `<owner>` 替换为你的 GitHub 用户名）：
 
 ```markdown
-![ccusage stats](https://raw.githubusercontent.com/<owner>/BurnRate/main/assets/ccusage-card.svg)
+![ccusage stats](./assets/ccusage-card.svg)
 ```
 
 生成后的卡片将展示总消耗量、工具/模型细分、以及趋势增长曲线。

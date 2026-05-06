@@ -30,7 +30,7 @@ If you just forked this repository to track your own usage:
    ```
 4. Update your GitHub Profile README: Replace `<owner>` with your GitHub username:
    ```markdown
-   ![ccusage stats](https://raw.githubusercontent.com/<owner>/BurnRate/main/assets/ccusage-card.svg)
+   ![ccusage stats](./assets/ccusage-card.svg)
    ```
    *(Note: Ensure your GitHub Actions have "Read and write permissions" enabled in Settings -> Actions -> General)*
 
@@ -79,7 +79,7 @@ bun run sync
    ```
 4. 更新你的 GitHub 个人主页 README：将 `<你的用户名>` 替换为你的 GitHub 用户名：
    ```markdown
-   ![ccusage stats](https://raw.githubusercontent.com/<你的用户名>/BurnRate/main/assets/ccusage-card.svg)
+   ![ccusage stats](./assets/ccusage-card.svg)
    ```
    *(注意：请确保你的 GitHub Actions 在 Settings -> Actions -> General 中开启了 "Read and write permissions" 权限)*
 
