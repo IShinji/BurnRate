@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-05-06T05:19:37.675Z",
+  "generatedAt": "2026-05-06T05:53:15.646Z",
   "dateRange": {
     "start": "2026-02-21",
     "end": "2026-05-05"
   },
   "totals": {
-    "costUSD": 6860.25,
+    "costUSD": 6863.41,
     "credits": 0,
-    "tokens": 9909013997
+    "tokens": 9912210491
   },
   "tools": [
     {
@@ -36,9 +36,9 @@
       "id": "codex",
       "name": "Codex",
       "color": "#10A37F",
-      "costUSD": 6116.2,
+      "costUSD": 6119.36,
       "credits": 0,
-      "tokens": 9106224704,
+      "tokens": 9109421198,
       "dates": 58,
       "files": [
         "data/codex-Mac.json",
@@ -49,8 +49,8 @@
       "models": [
         {
           "name": "gpt-5.5",
-          "costUSD": 5898.64,
-          "tokens": 8669728080
+          "costUSD": 5901.8,
+          "tokens": 8672924574
         },
         {
           "name": "gpt-5.4",
@@ -839,29 +839,29 @@
     },
     {
       "date": "2026-05-05",
-      "costUSD": 295.87,
+      "costUSD": 299.04,
       "credits": 0,
-      "tokens": 413859898,
+      "tokens": 417056392,
       "tools": {
         "codex": {
           "name": "Codex",
-          "costUSD": 295.86989,
+          "costUSD": 299.03666799999996,
           "credits": 0,
-          "tokens": 413859898,
+          "tokens": 417056392,
           "models": {
             "gpt-5.5": {
-              "costUSD": 295.86989,
-              "tokens": 413859898
+              "costUSD": 299.03666799999996,
+              "tokens": 417056392
             }
           }
         }
       },
-      "cumulativeCostUSD": 6860.24,
-      "cumulativeTokens": 9909013997,
+      "cumulativeCostUSD": 6863.41,
+      "cumulativeTokens": 9912210491,
       "cumulativeCredits": 0,
       "cumulativeTools": {
         "claude-code": 802789293,
-        "codex": 9106224704,
+        "codex": 9109421198,
         "opencode": 0,
         "pi": 0,
         "amp": 0
