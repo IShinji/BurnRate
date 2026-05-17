@@ -1,1 +1,11 @@
-{"daily":[],"totals":null}
+{
+  "tool": "opencode",
+  "package": "@ccusage/opencode@latest",
+  "label": "OpenCode",
+  "generatedAt": "2026-05-17T04:25:34.866Z",
+  "ok": false,
+  "reason": "command_failed",
+  "exitCode": 1,
+  "stderr": "Resolving dependencies\nResolved, downloaded and extracted [4]\nSaved lockfile\nuse npx ccusage instead",
+  "data": []
+}
