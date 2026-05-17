@@ -1,11 +1,1 @@
-{
-  "tool": "pi",
-  "package": "@ccusage/pi@latest",
-  "label": "Pi",
-  "generatedAt": "2026-05-17T04:25:53.086Z",
-  "ok": false,
-  "reason": "command_failed",
-  "exitCode": 1,
-  "stderr": "Resolving dependencies\nResolved, downloaded and extracted [2]\nSaved lockfile\nuse npx ccusage instead",
-  "data": []
-}
+{"daily":[],"totals":null}
