@@ -2,10 +2,10 @@
   "tool": "codex",
   "package": "@ccusage/codex@latest",
   "label": "Codex",
-  "generatedAt": "2026-05-17T04:25:34.210Z",
+  "generatedAt": "2026-05-17T04:25:52.207Z",
   "ok": false,
   "reason": "command_failed",
   "exitCode": 1,
-  "stderr": "Resolving dependencies\nResolved, downloaded and extracted [4]\nSaved lockfile\nuse npx ccusage instead",
+  "stderr": "Resolving dependencies\nResolved, downloaded and extracted [2]\nSaved lockfile\nuse npx ccusage instead",
   "data": []
 }
