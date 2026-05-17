@@ -11,11 +11,11 @@ REMOTE="${CCUSAGE_REMOTE:-origin}"
 PUSH_REF="${CCUSAGE_PUSH_REF:-HEAD}"
 
 TOOLS=(
-  "claude-code|ccusage@latest|Claude Code"
-  "codex|@ccusage/codex@latest|Codex"
-  "opencode|@ccusage/opencode@latest|OpenCode"
-  "pi|@ccusage/pi@latest|Pi"
-  "amp|@ccusage/amp@latest|Amp"
+  "claude-code|ccusage@latest|claude|Claude Code"
+  "codex|ccusage@latest|codex|Codex"
+  "opencode|ccusage@latest|opencode|OpenCode"
+  "pi|ccusage@latest|pi|Pi"
+  "amp|ccusage@latest|amp|Amp"
 )
 
 log() {
@@ -106,8 +106,8 @@ build_common_args() {
 
 export_tool() {
   local spec="$1"
-  local id package label
-  IFS='|' read -r id package label <<< "$spec"
+  local id package subcommand label
+  IFS='|' read -r id package subcommand label <<< "$spec"
 
   local hostname_suffix
   hostname_suffix=$(hostname -s)
@@ -116,7 +116,7 @@ export_tool() {
   tmpfile="$(mktemp "${DATA_DIR}/.tmp.${id}.XXXXXX")"
   errfile="$(mktemp "${DATA_DIR}/.err.${id}.XXXXXX")"
 
-  local cmd=(bunx "$package" ${COMMON_ARGS[@]+"${COMMON_ARGS[@]}"} ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"})
+  local cmd=(bunx "$package" "$subcommand" ${COMMON_ARGS[@]+"${COMMON_ARGS[@]}"} ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"})
   log "Exporting $label with: ${cmd[*]}"
 
   if "${cmd[@]}" >"$tmpfile" 2>"$errfile"; then
