@@ -47,11 +47,11 @@ bun run export:data
 ```
 
 这会自动运行以下命令并将 JSON 结果存入 `data/` 目录：
-- `ccusage daily --json`
-- `@ccusage/codex daily --json`
-- `@ccusage/opencode daily --json`
-- `@ccusage/pi daily --json`
-- `@ccusage/amp daily --json`
+- `ccusage claude daily --json`
+- `ccusage codex daily --json`
+- `ccusage opencode daily --json`
+- `ccusage pi daily --json`
+- `ccusage amp daily --json`
 
 ### 3. 生成卡片
 

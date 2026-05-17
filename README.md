@@ -39,11 +39,11 @@ If you just forked this repository to track your own usage:
 The exporter calls these commands and writes one JSON file per tool into `data/`:
 
 ```bash
-bunx ccusage@latest daily --json
-bunx @ccusage/codex@latest daily --json
-bunx @ccusage/opencode@latest daily --json
-bunx @ccusage/pi@latest daily --json
-bunx @ccusage/amp@latest daily --json
+bunx ccusage@latest claude daily --json
+bunx ccusage@latest codex daily --json
+bunx ccusage@latest opencode daily --json
+bunx ccusage@latest pi daily --json
+bunx ccusage@latest amp daily --json
 ```
 
 Generate the card locally:
