@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-06-01T16:37:03.907Z",
+  "generatedAt": "2026-06-03T06:05:23.423Z",
   "dateRange": {
     "start": "2026-02-21",
-    "end": "2026-06-01"
+    "end": "2026-06-02"
   },
   "totals": {
-    "costUSD": 23291.01,
+    "costUSD": 23332.54,
     "credits": 0,
-    "tokens": 36070281103
+    "tokens": 36129422918
   },
   "tools": [
     {
       "id": "claude-code",
       "name": "Claude Code",
       "color": "#6E56CF",
-      "costUSD": 8584.64,
+      "costUSD": 8625.21,
       "credits": 0,
-      "tokens": 14271558713,
-      "dates": 49,
+      "tokens": 14330158225,
+      "dates": 50,
       "files": [
         "data/claude-code-Mac.json",
         "data/claude-code-MacBook-Pro.json",
@@ -33,8 +33,8 @@
         },
         {
           "name": "claude-opus-4-8",
-          "costUSD": 483.55,
-          "tokens": 616538212
+          "costUSD": 524.12,
+          "tokens": 675137724
         },
         {
           "name": "claude-sonnet-4-6",
@@ -52,10 +52,10 @@
       "id": "codex",
       "name": "Codex",
       "color": "#10A37F",
-      "costUSD": 14706.37,
+      "costUSD": 14707.33,
       "credits": 0,
-      "tokens": 21798722390,
-      "dates": 114,
+      "tokens": 21799264693,
+      "dates": 115,
       "files": [
         "data/codex-Mac.json",
         "data/codex-MacBook-Pro.json",
@@ -66,8 +66,8 @@
       "models": [
         {
           "name": "gpt-5.5",
-          "costUSD": 14379.43,
-          "tokens": 21170958888
+          "costUSD": 14380.4,
+          "tokens": 21171501191
         },
         {
           "name": "gpt-5.4",
@@ -1897,29 +1897,71 @@
     },
     {
       "date": "2026-06-01",
-      "costUSD": 53.5,
+      "costUSD": 59.34,
       "credits": 0,
-      "tokens": 77228929,
+      "tokens": 81066087,
       "tools": {
         "claude-code": {
           "name": "Claude Code",
-          "costUSD": 53.50496899999999,
+          "costUSD": 59.34283174999999,
           "credits": 0,
-          "tokens": 77228929,
+          "tokens": 81066087,
           "models": {
             "claude-opus-4-8": {
-              "costUSD": 53.50496899999999,
-              "tokens": 77228929
+              "costUSD": 59.34283174999999,
+              "tokens": 81066087
             }
           }
         }
       },
-      "cumulativeCostUSD": 23291.01,
-      "cumulativeTokens": 36070281103,
+      "cumulativeCostUSD": 23296.85,
+      "cumulativeTokens": 36074118261,
       "cumulativeCredits": 0,
       "cumulativeTools": {
-        "claude-code": 14271558713,
+        "claude-code": 14275395871,
         "codex": 21798722390,
+        "opencode": 0,
+        "pi": 0,
+        "amp": 0
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "costUSD": 35.69,
+      "credits": 0,
+      "tokens": 55304657,
+      "tools": {
+        "claude-code": {
+          "name": "Claude Code",
+          "costUSD": 34.730388250000004,
+          "credits": 0,
+          "tokens": 54762354,
+          "models": {
+            "claude-opus-4-8": {
+              "costUSD": 34.730388250000004,
+              "tokens": 54762354
+            }
+          }
+        },
+        "codex": {
+          "name": "Codex",
+          "costUSD": 0.9641520000000001,
+          "credits": 0,
+          "tokens": 542303,
+          "models": {
+            "gpt-5.5": {
+              "costUSD": 0.9641520000000001,
+              "tokens": 542303
+            }
+          }
+        }
+      },
+      "cumulativeCostUSD": 23332.54,
+      "cumulativeTokens": 36129422918,
+      "cumulativeCredits": 0,
+      "cumulativeTools": {
+        "claude-code": 14330158225,
+        "codex": 21799264693,
         "opencode": 0,
         "pi": 0,
         "amp": 0
